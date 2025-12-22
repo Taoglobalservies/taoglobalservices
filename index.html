@@ -37,4 +37,199 @@ nav{
   height:46px;
 }
 
-nav a, nav butt
+nav a, nav button{
+  margin-left:18px;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+.hero{
+  padding:90px 20px;
+  text-align:center;
+  background:radial-gradient(circle at top,#f4f8fc,#fff);
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#555;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:28px;
+  padding:14px 40px;
+  background:linear-gradient(135deg,var(--blue),var(--dark));
+  color:#fff;
+  border-radius:40px;
+  text-decoration:none;
+}
+
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+section h2{
+  font-size:30px;
+}
+
+section p{
+  max-width:720px;
+  margin:auto;
+  color:#555;
+}
+
+.image{
+  max-width:900px;
+  margin:40px auto;
+}
+
+.image img{
+  width:100%;
+  border-radius:18px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:28px;
+  max-width:1000px;
+  margin:50px auto 0;
+}
+
+.card{
+  padding:30px;
+  border-radius:16px;
+  border:1px solid #eee;
+}
+
+.contact{
+  background:#f7f9fc;
+}
+
+.contact a{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 40px;
+  border-radius:40px;
+  background:linear-gradient(135deg,var(--gold),#b8962e);
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  background:var(--dark);
+  color:#bbb;
+  text-align:center;
+  padding:24px;
+  font-size:14px;
+}
+
+@media(max-width:600px){
+  .hero h1{font-size:30px;}
+  nav{flex-direction:column;gap:10px;}
+}
+</style>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll("[data-th]").forEach(el=>{
+    el.innerText = el.dataset[lang];
+  });
+}
+</script>
+
+</head>
+
+<body onload="setLang('en')">
+
+<nav>
+  <div class="logo">
+    <img src="logo.png">
+    <strong>Tao Global Services</strong>
+  </div>
+  <div>
+    <button onclick="setLang('th')">TH</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1 data-th="พลังการเชื่อมต่อระดับโลก"
+      data-en="Global Flow. Global Prosperity."></h1>
+
+  <p data-th="โลจิสติกส์และการค้าระหว่างประเทศ"
+     data-en="International Logistics & Global Trading"></p>
+
+  <a class="btn" href="mailto:info@taoglobalservices.com"
+     data-th="ติดต่อเรา"
+     data-en="Contact Us"></a>
+</div>
+
+<!-- IMAGE -->
+<div class="image">
+  <img src="https://picsum.photos/1200/600?shipping" alt="Global Logistics">
+</div>
+
+<!-- ABOUT -->
+<section>
+  <h2 data-th="เกี่ยวกับเรา" data-en="About Us"></h2>
+  <p data-th="Tao Global Services ให้บริการโลจิสติกส์และการค้าระหว่างประเทศ เสริมพลังการไหลเวียนทางธุรกิจ"
+     data-en="Tao Global Services provides international logistics and trading solutions with trust and global connectivity."></p>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2 data-th="บริการของเรา" data-en="Our Services"></h2>
+
+  <div class="services">
+    <div class="card"
+         data-th="โลจิสติกส์ระหว่างประเทศ"
+         data-en="International Logistics"></div>
+
+    <div class="card"
+         data-th="นำเข้า – ส่งออก"
+         data-en="Import & Export"></div>
+
+    <div class="card"
+         data-th="จัดหาสินค้าต่างประเทศ"
+         data-en="Global Sourcing"></div>
+
+    <div class="card"
+         data-th="ตัวกลางการค้า"
+         data-en="Trading & Brokerage"></div>
+  </div>
+</section>
+
+<!-- IMAGE -->
+<div class="image">
+  <img src="https://picsum.photos/1200/600?container" alt="Shipping">
+</div>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2 data-th="ติดต่อ" data-en="Contact"></h2>
+  <p data-th="ติดต่อเพื่อโอกาสทางธุรกิจ"
+     data-en="Contact us for business opportunities"></p>
+
+  <a href="mailto:info@taoglobalservices.com">
+    info@taoglobalservices.com
+  </a>
+</section>
+
+<footer>
+  © 2025 Tao Global Services
+</footer>
+
+</body>
+</html>
