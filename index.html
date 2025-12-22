@@ -6,229 +6,196 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root{
-  --dark:#0b1c2d;
-  --blue:#0d5ea6;
-  --gold:#d4af37;
+* {
+  box-sizing: border-box;
 }
 
-body{
-  margin:0;
-  font-family:Segoe UI, Arial, sans-serif;
-  background:#fff;
-  color:var(--dark);
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
 }
 
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 30px;
-  border-bottom:1px solid #eee;
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18 px 40 px;
+  border-bottom: 1 px solid #eee;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
+nav .logo {
+  font-size: 40 px;
+  font-weight: bold;
 }
 
-.logo img{
-  height:46px;
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
 }
 
-nav a, nav button{
-  margin-left:18px;
-  text-decoration:none;
-  color:#333;
-  font-size:14px;
-  background:none;
-  border:none;
-  cursor:pointer;
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
 }
 
-.hero{
-  padding:90px 20px;
-  text-align:center;
-  background:radial-gradient(circle at top,#f4f8fc,#fff);
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-.hero h1{
-  font-size:42px;
+.hero p {
+  font-size: 18px;
+  color: #555;
 }
 
-.hero p{
-  font-size:18px;
-  color:#555;
+.hero .btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:28px;
-  padding:14px 40px;
-  background:linear-gradient(135deg,var(--blue),var(--dark));
-  color:#fff;
-  border-radius:40px;
-  text-decoration:none;
+/* SECTION */
+section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-section{
-  padding:80px 20px;
-  text-align:center;
+section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-section h2{
-  font-size:30px;
+section p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  font-size: 17px;
 }
 
-section p{
-  max-width:720px;
-  margin:auto;
-  color:#555;
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 50px auto 0;
 }
 
-.image{
-  max-width:900px;
-  margin:40px auto;
+.card {
+  padding: 35px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+  transition: all 0.3s ease;
 }
 
-.image img{
-  width:100%;
-  border-radius:18px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:28px;
-  max-width:1000px;
-  margin:50px auto 0;
+/* CONTACT */
+.contact-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 45px;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
 }
 
-.card{
-  padding:30px;
-  border-radius:16px;
-  border:1px solid #eee;
-}
-
-.contact{
-  background:#f7f9fc;
-}
-
-.contact a{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 40px;
-  border-radius:40px;
-  background:linear-gradient(135deg,var(--gold),#b8962e);
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-footer{
-  background:var(--dark);
-  color:#bbb;
-  text-align:center;
-  padding:24px;
-  font-size:14px;
-}
-
-@media(max-width:600px){
-  .hero h1{font-size:30px;}
-  nav{flex-direction:column;gap:10px;}
+/* FOOTER */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
 }
 </style>
-
-<script>
-function setLang(lang){
-  document.querySelectorAll("[data-th]").forEach(el=>{
-    el.innerText = el.dataset[lang];
-  });
-}
-</script>
-
 </head>
 
-<body onload="setLang('en')">
+<body>
 
 <nav>
-  <div class="logo">
-    <img src="logo.png">
-    <strong>Tao Global Services</strong>
-  </div>
+  <div class="logo">Tao Global Services</div>
   <div>
-    <button onclick="setLang('th')">TH</button>
-    <button onclick="setLang('en')">EN</button>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <h1 data-th="พลังการเชื่อมต่อระดับโลก"
-      data-en="Global Flow. Global Prosperity."></h1>
+  <h1>Global Logistics Made Simple</h1>
+  <p>International Logistics & Trading Solutions</p>
 
-  <p data-th="โลจิสติกส์และการค้าระหว่างประเทศ"
-     data-en="International Logistics & Global Trading"></p>
-
-  <a class="btn" href="mailto:info@taoglobalservices.com"
-     data-th="ติดต่อเรา"
-     data-en="Contact Us"></a>
+  <a class="btn"
+     href="mailto:info@taoglobalservices.com
+     ?subject=Business Inquiry
+     &body=Hello Tao Global Services,%0D%0A%0D%0AI would like to inquire about your services.">
+     Contact Us
+  </a>
 </div>
 
-<!-- IMAGE -->
-<div class="image">
-  <img src="https://picsum.photos/1200/600?shipping" alt="Global Logistics">
-</div>
-
-<!-- ABOUT -->
-<section>
-  <h2 data-th="เกี่ยวกับเรา" data-en="About Us"></h2>
-  <p data-th="Tao Global Services ให้บริการโลจิสติกส์และการค้าระหว่างประเทศ เสริมพลังการไหลเวียนทางธุรกิจ"
-     data-en="Tao Global Services provides international logistics and trading solutions with trust and global connectivity."></p>
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Tao Global Services provides international logistics, global sourcing,
+    and import-export solutions. We act as a professional intermediary to
+    ensure smooth and reliable worldwide delivery.
+  </p>
 </section>
 
-<!-- SERVICES -->
-<section>
-  <h2 data-th="บริการของเรา" data-en="Our Services"></h2>
+<section id="services" style="background:#f9f9f9;">
+  <h2>Our Services</h2>
 
   <div class="services">
-    <div class="card"
-         data-th="โลจิสติกส์ระหว่างประเทศ"
-         data-en="International Logistics"></div>
+    <div class="card">
+      <h3>International Logistics</h3>
+      <p>Worldwide air, sea, and land transportation services.</p>
+    </div>
 
-    <div class="card"
-         data-th="นำเข้า – ส่งออก"
-         data-en="Import & Export"></div>
+    <div class="card">
+      <h3>Import & Export</h3>
+      <p>Full documentation and customs coordination.</p>
+    </div>
 
-    <div class="card"
-         data-th="จัดหาสินค้าต่างประเทศ"
-         data-en="Global Sourcing"></div>
+    <div class="card">
+      <h3>Global Sourcing</h3>
+      <p>Overseas product sourcing and purchasing.</p>
+    </div>
 
-    <div class="card"
-         data-th="ตัวกลางการค้า"
-         data-en="Trading & Brokerage"></div>
+    <div class="card">
+      <h3>Trading Services</h3>
+      <p>Professional trading and brokerage support.</p>
+    </div>
   </div>
 </section>
 
-<!-- IMAGE -->
-<div class="image">
-  <img src="https://picsum.photos/1200/600?container" alt="Shipping">
-</div>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>For business inquiries, please email us.</p>
 
-<!-- CONTACT -->
-<section class="contact">
-  <h2 data-th="ติดต่อ" data-en="Contact"></h2>
-  <p data-th="ติดต่อเพื่อโอกาสทางธุรกิจ"
-     data-en="Contact us for business opportunities"></p>
-
-  <a href="mailto:info@taoglobalservices.com">
+  <a class="contact-btn" href="mailto:info@taoglobalservices.com">
     info@taoglobalservices.com
   </a>
 </section>
 
 <footer>
-  © 2025 Tao Global Services
+  © 2025 Tao Global Services. All rights reserved.
 </footer>
 
 </body>
