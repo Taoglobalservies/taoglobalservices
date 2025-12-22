@@ -13,6 +13,7 @@
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:"Segoe UI",Arial,sans-serif;
@@ -30,22 +31,26 @@ nav{
   border-bottom:1px solid #eee;
   flex-wrap:wrap;
 }
+
 .logo{
   display:flex;
   align-items:center;
-  gap:10px;
-  font-size:24px;
+  gap:12px;
+  font-size:26px;
   font-weight:700;
 }
+
 .logo img{
   height:52px;
 }
+
 nav a{
   margin-left:18px;
   text-decoration:none;
   color:#222;
   font-size:14px;
 }
+
 .lang-btn{
   border:1px solid #ccc;
   padding:4px 10px;
@@ -60,16 +65,22 @@ nav a{
   padding:90px 20px;
   background:linear-gradient(to bottom,#f7f7f7,#fff);
 }
+
 .hero h1{
   font-size:clamp(32px,5vw,46px);
+  margin-bottom:12px;
 }
+
 .hero p{
   color:var(--gray);
   font-size:18px;
+  max-width:720px;
+  margin:0 auto;
 }
+
 .btn{
   display:inline-block;
-  margin-top:30px;
+  margin-top:32px;
   padding:14px 40px;
   background:var(--black);
   color:#fff;
@@ -82,162 +93,6 @@ section{
   padding:70px 20px;
   text-align:center;
 }
+
 section h2{
-  font-size:30px;
-}
-section p{
-  max-width:720px;
-  margin:auto;
-  color:var(--gray);
-  font-size:17px;
-}
-
-/* SERVICES */
-.services{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:28px;
-  max-width:1000px;
-  margin-inline:auto;
-}
-.card{
-  border:1px solid #eee;
-  padding:30px;
-  border-radius:16px;
-  background:#fff;
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-/* CONTACT */
-.contact-btn{
-  display:inline-block;
-  margin:12px;
-  padding:14px 36px;
-  border-radius:30px;
-  text-decoration:none;
-  color:#fff;
-}
-.whatsapp{background:#25D366}
-.line{background:#06C755}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:#aaa;
-  padding:25px;
-  font-size:14px;
-  text-align:center;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  nav{justify-content:center;gap:10px}
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-  <div class="logo">
-    <img src="logo.png" alt="Tao Global Services">
-    Tao Global Services
-  </div>
-  <div>
-    <a href="#about" data-en="About" data-th="เกี่ยวกับเรา">About</a>
-    <a href="#services" data-en="Services" data-th="บริการ">Services</a>
-    <a href="#contact" data-en="Contact" data-th="ติดต่อ">Contact</a>
-    <span class="lang-btn" onclick="toggleLang()">TH / EN</span>
-  </div>
-</nav>
-
-<header class="hero">
-  <h1 data-en="Global Logistics Made Simple"
-      data-th="โลจิสติกส์ระดับโลก ที่เรียบง่ายและมั่นคง">
-      Global Logistics Made Simple
-  <h1
- data-en="Connecting Global Trade with the Right Flow"
- data-th="เชื่อมต่อการค้าระดับโลก ด้วยไหลลื่น">
-Connecting Global Trade with the Right Flow
-</h1>
-
-<p
- data-en="International Logistics & Trading Solutions Built on Trust and Flow"
- data-th="โลจิสติกส์และการค้าระหว่างประเทศ ที่ขับเคลื่อนด้วยความน่าเชื่อถือและการลื่นไหลที่ลงตัว">
-International Logistics & Trading Solutions Built on Trust and Flow
-
-  <a class="btn"
-     href="mailto:info@taoglobalservices.com">
-     Contact Us
-  </a>
-</header>
-
-<section id="about">
-  <h2 data-en="About Us" data-th="เกี่ยวกับ Tao Global Services">About Us</h2>
-  <p
- data-en="Tao Global Services operates as a trusted global intermediary. We believe that successful logistics and trade depend on connection, clarity, and the right timing — aligning every movement for smooth international flow."
- data-th="Tao Global Services ทำหน้าที่เป็นตัวกลางระดับโลกที่ขับเคลื่อนด้วยความเชื่อมโยง ความชัดเจน และจังหวะที่เหมาะสม เราเชื่อว่าความสำเร็จของโลจิสติกส์และการค้า เกิดจากการจัดวางทุกขั้นตอนให้ไหลลื่นและลงตัวในเวลาที่ใช่">
-</p>
-</section>
-
-<section id="services" style="background:var(--light)">
-  <h2 data-en="Our Services" data-th="บริการของเรา">Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>International Logistics</h3>
-      <p>Air · Sea · Land Worldwide</p>
-    </div>
-    <div class="card">
-      <h3>Import & Export</h3>
-      <p>Customs & Documentation</p>
-    </div>
-    <div class="card">
-      <h3>Global Sourcing</h3>
-      <p>Worldwide Product Procurement</p>
-    </div>
-    <div class="card">
-      <h3>Trading Services</h3>
-      <p>Professional Intermediary</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2 data-en="Contact Us" data-th="ติดต่อเรา">Contact Us</h2>
-
-  <a class="contact-btn whatsapp"
-     href="https://wa.me/66921563555"
-     target="_blank">
-     WhatsApp
-  </a>
-
-  <a class="contact-btn line"
-     href="https://line.me/ti/p/~YOUR_LINE_ID"
-     target="_blank">
-     LINE
-  </a>
-</section>
-
-<footer>
-  © 2025 Tao Global Services · Connected with Purpose · Moving with Precision
-</footer>
-
-<script>
-let isTH=false;
-function toggleLang(){
-  isTH=!isTH;
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    el.textContent=isTH?el.dataset.th:el.dataset.en;
-  });
-}
-</script>
-
-</body>
-</html>
-
-
+  font-size:3
