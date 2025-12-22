@@ -1,251 +1,40 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tao Global Services | Global Flow Prosperity</title>
+<title>Tao Global Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root {
-  --primary: #111;
-  --silver: #cfcfcf;
-  --gold: #d4af37;
-  --bg: #ffffff;
+:root{
+  --dark:#0b1c2d;
+  --blue:#0d5ea6;
+  --gold:#d4af37;
 }
 
-* {
-  box-sizing: border-box;
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#fff;
+  color:var(--dark);
 }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--primary);
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 30px;
+  border-bottom:1px solid #eee;
 }
 
-/* NAV */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 32px;
-  border-bottom: 1px solid #eee;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.logo img{
+  height:46px;
 }
 
-.logo-text {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-}
-
-/* HERO */
-.hero {
-  padding: 90px 20px;
-  text-align: center;
-  background:
-    radial-gradient(circle at top, #f7f7f7, #ffffff);
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #555;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 42px;
-  background: linear-gradient(135deg, #000, #333);
-  color: #fff;
-  border-radius: 40px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-/* SECTION */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-section p {
-  max-width: 720px;
-  margin: auto;
-  font-size: 16px;
-  color: #555;
-}
-
-/* SERVICES */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 28px;
-  max-width: 1000px;
-  margin: 50px auto 0;
-}
-
-.card {
-  padding: 32px;
-  border-radius: 18px;
-  background: #fff;
-  border: 1px solid #eee;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
-}
-
-/* CONTACT */
-.contact {
-  background: #f9f9f9;
-}
-
-.contact a {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 40px;
-  border-radius: 40px;
-  background: linear-gradient(135deg, var(--gold), #b8962e);
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 24px;
-  font-size: 14px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAV -->
-<nav>
-  <div class="logo-wrap">
-    <!-- LOGO SVG (มู: วงกลม = จักรวาล / เส้นไหล = เงินเข้า) -->
-    <svg width="42" height="42" viewBox="0 0 100 100">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#d4af37"/>
-          <stop offset="100%" stop-color="#cfcfcf"/>
-        </linearGradient>
-      </defs>
-      <circle cx="50" cy="50" r="42" fill="none" stroke="url(#g)" stroke-width="4"/>
-      <path d="M20 55 C40 30, 60 70, 80 45"
-            fill="none" stroke="#111" stroke-width="3"
-            stroke-linecap="round"/>
-    </svg>
-
-    <div class="logo-text">Tao Global Services</div>
-  </div>
-
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <h1>Global Flow. Global Prosperity.</h1>
-  <p>พลังการไหลเวียนระดับโลก เพื่อความมั่นคงและความสำเร็จ</p>
-
-  <a class="btn"
-     href="mailto:info@taoglobalservices.com
-     ?subject=Business Inquiry
-     &body=Hello Tao Global Services,%0D%0A%0D%0AI would like to inquire about your services.">
-     ติดต่อเรา
-  </a>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Tao Global Services</h2>
-  <p>
-    Tao Global Services คือผู้ให้บริการโลจิสติกส์และการค้าระหว่างประเทศ
-    ที่ขับเคลื่อนด้วยพลังความถูกต้อง ความน่าเชื่อถือ
-    และการไหลเวียนของโอกาสอย่างไม่สะดุด
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>International Logistics</h3>
-      <p>ขนส่งระหว่างประเทศ ทางอากาศ ทางเรือ และทางบก</p>
-    </div>
-
-    <div class="card">
-      <h3>Import & Export</h3>
-      <p>ดูแลเอกสารและกระบวนการนำเข้า-ส่งออกครบวงจร</p>
-    </div>
-
-    <div class="card">
-      <h3>Global Sourcing</h3>
-      <p>จัดหาสินค้าและประสานงานต่างประเทศ</p>
-    </div>
-
-    <div class="card">
-      <h3>Trading & Brokerage</h3>
-      <p>ตัวกลางทางการค้าอย่างมืออาชีพ</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>ติดต่อเพื่อโอกาสทางธุรกิจและความร่วมมือ</p>
-
-  <a href="mailto:info@taoglobalservices.com">
-    info@taoglobalservices.com
-  </a>
-</section>
-
-<footer>
-  © 2025 Tao Global Services | Global Flow • Prosperity • Trust
-</footer>
-
-</body>
-</html>
+nav a, nav butt
