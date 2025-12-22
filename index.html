@@ -6,11 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+:root{
+  --black:#000;
+  --gray:#555;
+  --light:#f7f7f7;
+}
+
+*{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   color:#222;
   background:#fff;
+  line-height:1.6;
 }
 
 /* NAV */
@@ -18,39 +27,63 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 32px;
+  padding:14px 30px;
   border-bottom:1px solid #eee;
+  flex-wrap:wrap;
 }
 
 .logo{
   display:flex;
   align-items:center;
-  gap:14px;
-}
-.logo img{height:90px;}
-.logo-text{
-  font-size:14px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  opacity:.8;
+  gap:12px;
 }
 
-nav a, .lang-btn{
-  margin-left:20px;
+.logo img{
+  height:90px; /* BIG LOGO */
+}
+
+.logo-text{
   font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  opacity:.75;
+}
+
+nav a{
+  margin-left:18px;
   text-decoration:none;
   color:#222;
+  font-size:14px;
+}
+
+.lang-btn{
+  margin-left:18px;
+  border:1px solid #ccc;
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:13px;
   cursor:pointer;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:100px 20px;
-  background:#f7f7f7;
+  padding:90px 20px;
+  background:linear-gradient(to bottom,#f7f7f7,#fff);
 }
-.hero h1{font-size:42px;}
-.hero p{max-width:700px;margin:auto;color:#555;}
+
+.hero h1{
+  font-size:clamp(30px,5vw,44px);
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:var(--gray);
+  font-size:17px;
+  max-width:720px;
+  margin:0 auto;
+}
 
 .btn{
   display:inline-block;
@@ -63,42 +96,73 @@ nav a, .lang-btn{
 }
 
 /* SECTION */
-section{text-align:center;padding:80px 20px;}
+section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+section h2{
+  font-size:28px;
+}
+
+section p{
+  max-width:720px;
+  margin:auto;
+  color:var(--gray);
+  font-size:16px;
+}
+
+/* SERVICES */
 .services{
+  margin-top:40px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:28px;
+  gap:26px;
   max-width:1000px;
-  margin:auto;
+  margin-inline:auto;
 }
+
 .card{
   border:1px solid #eee;
   padding:30px;
   border-radius:16px;
+  background:#fff;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 /* CONTACT */
-.contact-actions{
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  margin-top:30px;
-}
 .contact-btn{
-  padding:14px 36px;
+  display:inline-block;
+  margin:10px;
+  padding:14px 34px;
   border-radius:30px;
-  color:#fff;
   text-decoration:none;
+  color:#fff;
+  font-size:15px;
 }
-.whatsapp{background:#25D366;}
-.email{background:#000;}
 
+.whatsapp{background:#25D366}
+.email{background:#000}
+
+/* FOOTER */
 footer{
   background:#111;
   color:#aaa;
+  padding:25px;
+  font-size:14px;
   text-align:center;
-  padding:26px;
-  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  nav{justify-content:center;gap:12px}
+  .logo img{height:72px}
+  .logo-text{font-size:12px}
 }
 </style>
 </head>
@@ -110,82 +174,102 @@ footer{
     <img src="logo.png" alt="Tao Global Services">
     <span class="logo-text">Tao Global Services</span>
   </div>
+
   <div>
+    <a href="#about" data-en="About" data-th="เกี่ยวกับเรา">About</a>
+    <a href="#services" data-en="Services" data-th="บริการ">Services</a>
+    <a href="#contact" data-en="Contact" data-th="ติดต่อ">Contact</a>
     <span class="lang-btn" onclick="toggleLang()">TH / EN</span>
   </div>
 </nav>
 
 <header class="hero">
-  <h1 data-en="Global Logistics Made Simple"
-      data-th="โลจิสติกส์ระดับโลก ที่มั่นคงและไหลลื่น">
-      Global Logistics Made Simple
+  <h1
+    data-en="Global Logistics in the Right Direction"
+    data-th="โลจิสติกส์ระดับโลก ที่ดำเนินไปในทิศทางที่เหมาะสม">
+    Global Logistics in the Right Direction
   </h1>
 
-  <p data-en="International logistics and trading solutions built on trust and smooth flow."
-     data-th="โซลูชันโลจิสติกส์และการค้าระหว่างประเทศ ที่ขับเคลื่อนด้วยจังหวะที่เหมาะสม">
-     International logistics and trading solutions built on trust and smooth flow.
+  <p
+    data-en="International logistics and trading solutions guided by clarity, proper timing, and balanced coordination."
+    data-th="โลจิสติกส์และการค้าระหว่างประเทศ ที่ขับเคลื่อนด้วยความชัดเจน จังหวะที่เหมาะสม และการประสานงานที่สมดุล">
+    International logistics and trading solutions guided by clarity, proper timing, and balanced coordination.
   </p>
 
-  <a class="btn"
-     data-en="Contact Us"
-     data-th="ติดต่อเรา"
-     href="mailto:info@taoglobalservices.com">
-     Contact Us
+  <a class="btn" href="mailto:info@taoglobalservices.com">
+    Contact Us
   </a>
 </header>
 
-<section>
+<section id="about">
+  <h2 data-en="About Us" data-th="เกี่ยวกับเรา">About Us</h2>
+  <p
+    data-en="Tao Global Services operates as a trusted global intermediary, emphasizing connection, alignment, and well-timed execution to support sustainable international growth."
+    data-th="Tao Global Services ดำเนินงานในฐานะตัวกลางระดับโลก ที่ให้ความสำคัญกับการเชื่อมโยง ความสอดคล้อง และการดำเนินงานในจังหวะที่เหมาะสม เพื่อสนับสนุนการเติบโตทางธุรกิจระหว่างประเทศอย่างยั่งยืน">
+  </p>
+</section>
+
+<section id="services" style="background:var(--light)">
   <h2 data-en="Our Services" data-th="บริการของเรา">Our Services</h2>
+
   <div class="services">
     <div class="card">
-      <h3>Logistics</h3>
-      <p data-en="Air · Sea · Land" data-th="อากาศ · ทะเล · ทางบก">Air · Sea · Land</p>
+      <h3>International Logistics</h3>
+      <p>Air · Sea · Land — Coordinated with precision</p>
     </div>
+
     <div class="card">
       <h3>Import & Export</h3>
-      <p data-en="Customs & Documentation" data-th="พิธีการศุลกากรและเอกสาร">
-        Customs & Documentation
-      </p>
+      <p>Structured documentation & customs handling</p>
     </div>
+
     <div class="card">
       <h3>Global Sourcing</h3>
-      <p data-en="Worldwide Procurement" data-th="จัดหาสินค้าทั่วโลก">
-        Worldwide Procurement
-      </p>
+      <p>Strategic sourcing aligned with global opportunity</p>
+    </div>
+
+    <div class="card">
+      <h3>Trading Services</h3>
+      <p>Professional intermediary support</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2 data-en="Contact" data-th="ติดต่อ">Contact</h2>
-  <div class="contact-actions">
-    <a class="contact-btn whatsapp"
-       data-en="WhatsApp"
-       data-th="แชทผ่าน WhatsApp"
-       href="https://wa.me/66921563555">
-       WhatsApp
-    </a>
-    <a class="contact-btn email"
-       data-en="Email"
-       data-th="ส่งอีเมล"
-       href="mailto:info@taoglobalservices.com">
-       Email
-    </a>
-  </div>
+<section id="contact">
+  <h2 data-en="Contact Us" data-th="ติดต่อเรา">Contact Us</h2>
+
+  <a class="contact-btn whatsapp"
+     href="https://wa.me/66921563555"
+     target="_blank">
+     WhatsApp
+  </a>
+
+  <a class="contact-btn email"
+     href="mailto:info@taoglobalservices.com">
+     Email
+  </a>
 </section>
 
 <footer>
-  © 2025 Tao Global Services
+  © 2025 Tao Global Services · Moving Forward in the Right Direction
 </footer>
 
 <script>
-let isTH = false;
-function toggleLang(){
-  isTH = !isTH;
+let currentLang = localStorage.getItem("lang") || "en";
+
+function applyLang(){
   document.querySelectorAll("[data-en]").forEach(el=>{
-    el.textContent = isTH ? el.dataset.th : el.dataset.en;
+    el.textContent = currentLang === "th" ? el.dataset.th : el.dataset.en;
   });
 }
+
+function toggleLang(){
+  currentLang = currentLang === "en" ? "th" : "en";
+  localStorage.setItem("lang", currentLang);
+  applyLang();
+}
+
+applyLang();
 </script>
 
 </body>
