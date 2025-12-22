@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tao Global Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* SECTION */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+section p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  font-size: 17px;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
+.card {
+  padding: 35px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* CONTACT */
+.contact-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 45px;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Tao Global Services</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Global Logistics Made Simple</h1>
+  <p>International Logistics & Trading Solutions</p>
+
+  <a class="btn"
+     href="mailto:info@taoglobalservices.com
+     ?subject=Business Inquiry
+     &body=Hello Tao Global Services,%0D%0A%0D%0AI would like to inquire about your services.">
+     Contact Us
+  </a>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Tao Global Services provides international logistics, global sourcing,
+    and import-export solutions. We act as a professional intermediary to
+    ensure smooth and reliable worldwide delivery.
+  </p>
+</section>
+
+<section id="services" style="background:#f9f9f9;">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>International Logistics</h3>
+      <p>Worldwide air, sea, and land transportation services.</p>
+    </div>
+
+    <div class="card">
+      <h3>Import & Export</h3>
+      <p>Full documentation and customs coordination.</p>
+    </div>
+
+    <div class="card">
+      <h3>Global Sourcing</h3>
+      <p>Overseas product sourcing and purchasing.</p>
+    </div>
+
+    <div class="card">
+      <h3>Trading Services</h3>
+      <p>Professional trading and brokerage support.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>For business inquiries, please email us.</p>
+
+  <a class="contact-btn" href="mailto:info@taoglobalservices.com">
+    info@taoglobalservices.com
+  </a>
+</section>
+
+<footer>
+  © 2025 Tao Global Services. All rights reserved.
+</footer>
+
+</body>
+</html>
+
 
