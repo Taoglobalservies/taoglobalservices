@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Tao Global Services</title>
+<title>Tao Global Services | Global Flow Prosperity</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+:root {
+  --primary: #111;
+  --silver: #cfcfcf;
+  --gold: #d4af37;
+  --bg: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,41 +20,48 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #ffffff;
-  color: #222;
+  background: var(--bg);
+  color: var(--primary);
 }
 
 /* NAV */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
+  justify-content: space-between;
+  padding: 16px 32px;
   border-bottom: 1px solid #eee;
 }
 
-nav .logo {
-  font-size: 22px;
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text {
   font-weight: bold;
+  font-size: 18px;
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 20px;
   text-decoration: none;
   color: #333;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* HERO */
 .hero {
-  padding: 100px 20px;
+  padding: 90px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+  background:
+    radial-gradient(circle at top, #f7f7f7, #ffffff);
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-size: 42px;
+  margin-bottom: 12px;
 }
 
 .hero p {
@@ -55,14 +69,15 @@ nav a {
   color: #555;
 }
 
-.hero .btn {
+.btn {
   display: inline-block;
   margin-top: 30px;
-  padding: 14px 40px;
-  background: #000;
+  padding: 14px 42px;
+  background: linear-gradient(135deg, #000, #333);
   color: #fff;
-  border-radius: 30px;
+  border-radius: 40px;
   text-decoration: none;
+  font-size: 15px;
 }
 
 /* SECTION */
@@ -72,48 +87,53 @@ section {
 }
 
 section h2 {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 15px;
 }
 
 section p {
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
+  font-size: 16px;
   color: #555;
-  font-size: 17px;
 }
 
 /* SERVICES */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 28px;
   max-width: 1000px;
   margin: 50px auto 0;
 }
 
 .card {
-  padding: 35px;
-  border: 1px solid #eee;
-  border-radius: 16px;
+  padding: 32px;
+  border-radius: 18px;
   background: #fff;
-  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
 }
 
 /* CONTACT */
-.contact-btn {
+.contact {
+  background: #f9f9f9;
+}
+
+.contact a {
   display: inline-block;
   margin-top: 25px;
-  padding: 15px 45px;
-  background: #000;
-  color: #fff;
-  border-radius: 30px;
+  padding: 14px 40px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--gold), #b8962e);
+  color: #000;
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* FOOTER */
@@ -121,16 +141,41 @@ footer {
   background: #111;
   color: #aaa;
   text-align: center;
-  padding: 25px;
+  padding: 24px;
   font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="logo">Tao Global Services</div>
+  <div class="logo-wrap">
+    <!-- LOGO SVG (มู: วงกลม = จักรวาล / เส้นไหล = เงินเข้า) -->
+    <svg width="42" height="42" viewBox="0 0 100 100">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#d4af37"/>
+          <stop offset="100%" stop-color="#cfcfcf"/>
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50" r="42" fill="none" stroke="url(#g)" stroke-width="4"/>
+      <path d="M20 55 C40 30, 60 70, 80 45"
+            fill="none" stroke="#111" stroke-width="3"
+            stroke-linecap="round"/>
+    </svg>
+
+    <div class="logo-text">Tao Global Services</div>
+  </div>
+
   <div>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -138,67 +183,69 @@ footer {
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Global Logistics Made Simple</h1>
-  <p>International Logistics & Trading Solutions</p>
+  <h1>Global Flow. Global Prosperity.</h1>
+  <p>พลังการไหลเวียนระดับโลก เพื่อความมั่นคงและความสำเร็จ</p>
 
   <a class="btn"
      href="mailto:info@taoglobalservices.com
      ?subject=Business Inquiry
      &body=Hello Tao Global Services,%0D%0A%0D%0AI would like to inquire about your services.">
-     Contact Us
+     ติดต่อเรา
   </a>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
-  <h2>About Us</h2>
+  <h2>About Tao Global Services</h2>
   <p>
-    Tao Global Services provides international logistics, global sourcing,
-    and import-export solutions. We act as a professional intermediary to
-    ensure smooth and reliable worldwide delivery.
+    Tao Global Services คือผู้ให้บริการโลจิสติกส์และการค้าระหว่างประเทศ
+    ที่ขับเคลื่อนด้วยพลังความถูกต้อง ความน่าเชื่อถือ
+    และการไหลเวียนของโอกาสอย่างไม่สะดุด
   </p>
 </section>
 
-<section id="services" style="background:#f9f9f9;">
+<!-- SERVICES -->
+<section id="services">
   <h2>Our Services</h2>
 
   <div class="services">
     <div class="card">
       <h3>International Logistics</h3>
-      <p>Worldwide air, sea, and land transportation services.</p>
+      <p>ขนส่งระหว่างประเทศ ทางอากาศ ทางเรือ และทางบก</p>
     </div>
 
     <div class="card">
       <h3>Import & Export</h3>
-      <p>Full documentation and customs coordination.</p>
+      <p>ดูแลเอกสารและกระบวนการนำเข้า-ส่งออกครบวงจร</p>
     </div>
 
     <div class="card">
       <h3>Global Sourcing</h3>
-      <p>Overseas product sourcing and purchasing.</p>
+      <p>จัดหาสินค้าและประสานงานต่างประเทศ</p>
     </div>
 
     <div class="card">
-      <h3>Trading Services</h3>
-      <p>Professional trading and brokerage support.</p>
+      <h3>Trading & Brokerage</h3>
+      <p>ตัวกลางทางการค้าอย่างมืออาชีพ</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>For business inquiries, please email us.</p>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>ติดต่อเพื่อโอกาสทางธุรกิจและความร่วมมือ</p>
 
-  <a class="contact-btn" href="mailto:info@taoglobalservices.com">
+  <a href="mailto:info@taoglobalservices.com">
     info@taoglobalservices.com
   </a>
 </section>
 
 <footer>
-  © 2025 Tao Global Services. All rights reserved.
+  © 2025 Tao Global Services | Global Flow • Prosperity • Trust
 </footer>
 
 </body>
 </html>
-
-
