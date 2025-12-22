@@ -6,31 +6,187 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root{
-  --black:#000;
-  --gray:#555;
-  --light:#f9f9f9;
-  --whatsapp:#25D366;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
   color:#222;
   background:#fff;
-  line-height:1.6;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:18px 32px;
   border-bottom:1px solid #eee;
-  flex-wrap:wrap
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.logo img{height:90px;}
+.logo-text{
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  opacity:.8;
+}
+
+nav a, .lang-btn{
+  margin-left:20px;
+  font-size:14px;
+  text-decoration:none;
+  color:#222;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:#f7f7f7;
+}
+.hero h1{font-size:42px;}
+.hero p{max-width:700px;margin:auto;color:#555;}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 40px;
+  background:#000;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+/* SECTION */
+section{text-align:center;padding:80px 20px;}
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:28px;
+  max-width:1000px;
+  margin:auto;
+}
+.card{
+  border:1px solid #eee;
+  padding:30px;
+  border-radius:16px;
+}
+
+/* CONTACT */
+.contact-actions{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-top:30px;
+}
+.contact-btn{
+  padding:14px 36px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+}
+.whatsapp{background:#25D366;}
+.email{background:#000;}
+
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:26px;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="Tao Global Services">
+    <span class="logo-text">Tao Global Services</span>
+  </div>
+  <div>
+    <span class="lang-btn" onclick="toggleLang()">TH / EN</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1 data-en="Global Logistics Made Simple"
+      data-th="โลจิสติกส์ระดับโลก ที่มั่นคงและไหลลื่น">
+      Global Logistics Made Simple
+  </h1>
+
+  <p data-en="International logistics and trading solutions built on trust and smooth flow."
+     data-th="โซลูชันโลจิสติกส์และการค้าระหว่างประเทศ ที่ขับเคลื่อนด้วยจังหวะที่เหมาะสม">
+     International logistics and trading solutions built on trust and smooth flow.
+  </p>
+
+  <a class="btn"
+     data-en="Contact Us"
+     data-th="ติดต่อเรา"
+     href="mailto:info@taoglobalservices.com">
+     Contact Us
+  </a>
+</header>
+
+<section>
+  <h2 data-en="Our Services" data-th="บริการของเรา">Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Logistics</h3>
+      <p data-en="Air · Sea · Land" data-th="อากาศ · ทะเล · ทางบก">Air · Sea · Land</p>
+    </div>
+    <div class="card">
+      <h3>Import & Export</h3>
+      <p data-en="Customs & Documentation" data-th="พิธีการศุลกากรและเอกสาร">
+        Customs & Documentation
+      </p>
+    </div>
+    <div class="card">
+      <h3>Global Sourcing</h3>
+      <p data-en="Worldwide Procurement" data-th="จัดหาสินค้าทั่วโลก">
+        Worldwide Procurement
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Contact" data-th="ติดต่อ">Contact</h2>
+  <div class="contact-actions">
+    <a class="contact-btn whatsapp"
+       data-en="WhatsApp"
+       data-th="แชทผ่าน WhatsApp"
+       href="https://wa.me/66921563555">
+       WhatsApp
+    </a>
+    <a class="contact-btn email"
+       data-en="Email"
+       data-th="ส่งอีเมล"
+       href="mailto:info@taoglobalservices.com">
+       Email
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Tao Global Services
+</footer>
+
+<script>
+let isTH = false;
+function toggleLang(){
+  isTH = !isTH;
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.textContent = isTH ? el.dataset.th : el.dataset.en;
+  });
+}
+</script>
+
+</body>
+</html>
