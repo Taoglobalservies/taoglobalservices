@@ -14,22 +14,23 @@
 
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-  margin:0;
-  font-family:"Segoe UI",Arial,sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color:#222;
   background:#fff;
   line-height:1.6;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 30px;
+  padding:18px 32px;
   border-bottom:1px solid #eee;
   flex-wrap:wrap;
 }
@@ -37,79 +38,89 @@ nav{
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
-  font-size:26px;
-  font-weight:700;
+  gap:14px;
 }
 
 .logo img{
-  height:52px;
+  height:90px; /* BIG LOGO */
+}
+
+.logo-text{
+  font-size:14px; /* SMALL TEXT */
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#222;
+  opacity:.8;
 }
 
 nav a{
-  margin-left:18px;
+  margin-left:20px;
   text-decoration:none;
   color:#222;
   font-size:14px;
 }
 
 .lang-btn{
+  margin-left:20px;
   border:1px solid #ccc;
-  padding:4px 10px;
+  padding:4px 12px;
   border-radius:20px;
-  cursor:pointer;
   font-size:13px;
+  cursor:pointer;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(to bottom,#f7f7f7,#ffffff);
+  padding:100px 20px;
+  background:linear-gradient(to bottom,#f7f7f7,#fff);
 }
 
 .hero h1{
-  font-size:clamp(32px,5vw,46px);
+  font-size:clamp(28px,4.5vw,44px);
   margin-bottom:12px;
 }
 
 .hero p{
+  font-size:17px;
   color:var(--gray);
-  font-size:18px;
-  max-width:720px;
+  max-width:700px;
   margin:0 auto;
 }
 
 .btn{
   display:inline-block;
   margin-top:32px;
-  padding:14px 40px;
-  background:var(--black);
+  padding:14px 42px;
+  background:#000;
   color:#fff;
-  border-radius:30px;
   text-decoration:none;
+  border-radius:30px;
+  font-size:14px;
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 section{
-  padding:70px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
 section h2{
   font-size:30px;
+  margin-bottom:16px;
 }
 
 section p{
   max-width:720px;
-  margin:auto;
+  margin:0 auto;
+  font-size:16px;
   color:var(--gray);
-  font-size:17px;
 }
 
-/* SERVICES */
+/* ===== SERVICES ===== */
 .services{
-  margin-top:40px;
+  margin-top:48px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:28px;
@@ -119,49 +130,51 @@ section p{
 
 .card{
   border:1px solid #eee;
-  padding:30px;
+  padding:32px;
   border-radius:16px;
   background:#fff;
-  transition:0.3s;
+  transition:.3s;
 }
 
 .card:hover{
   transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
-/* CONTACT */
+/* ===== CONTACT ===== */
 .contact-btn{
   display:inline-block;
-  margin:12px;
-  padding:14px 36px;
+  margin-top:24px;
+  padding:14px 40px;
+  background:#25D366;
+  color:#fff;
   border-radius:30px;
   text-decoration:none;
-  color:#fff;
+  font-size:14px;
 }
 
-.whatsapp{
-  background:#25D366;
-}
-
-.line{
-  background:#06C755;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
   background:#111;
   color:#aaa;
-  padding:25px;
-  font-size:14px;
+  padding:26px;
   text-align:center;
+  font-size:13px;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media(max-width:600px){
   nav{
     justify-content:center;
-    gap:10px;
+    gap:12px;
+  }
+
+  .logo img{
+    height:72px;
+  }
+
+  .logo-text{
+    font-size:12px;
   }
 }
 </style>
@@ -171,96 +184,4 @@ footer{
 
 <nav>
   <div class="logo">
-    <img src="logo.png" alt="Tao Global Services">
-    Tao Global Services
-  </div>
-  <div>
-    <a href="#about" data-en="About" data-th="เกี่ยวกับเรา">About</a>
-    <a href="#services" data-en="Services" data-th="บริการ">Services</a>
-    <a href="#contact" data-en="Contact" data-th="ติดต่อ">Contact</a>
-    <span class="lang-btn" onclick="toggleLang()">TH / EN</span>
-  </div>
-</nav>
-
-<header class="hero">
-  <h1
-    data-en="Connecting Global Trade with the Right Flow"
-    data-th="เชื่อมต่อการค้าระดับโลก ด้วยจังหวะที่ลงตัว">
-    Connecting Global Trade with the Right Flow
-  </h1>
-
-  <p
-    data-en="International Logistics & Trading Solutions Built on Trust and Precision"
-    data-th="โลจิสติกส์และการค้าระหว่างประเทศ ที่ขับเคลื่อนด้วยความน่าเชื่อถือและความแม่นยำ">
-    International Logistics & Trading Solutions Built on Trust and Precision
-  </p>
-
-  <a class="btn" href="mailto:info@taoglobalservices.com">
-    Contact Us
-  </a>
-</header>
-
-<section id="about">
-  <h2 data-en="About Us" data-th="เกี่ยวกับ Tao Global Services">About Us</h2>
-  <p
-    data-en="Tao Global Services operates as a trusted global intermediary. We believe that successful logistics and trade depend on connection, clarity, and the right timing — aligning every movement for smooth international flow."
-    data-th="Tao Global Services ทำหน้าที่เป็นตัวกลางระดับโลก โดยยึดหลักความเชื่อมโยง ความชัดเจน และจังหวะที่เหมาะสม เราเชื่อว่าความสำเร็จของโลจิสติกส์และการค้า เกิดจากการจัดวางทุกขั้นตอนอย่างเป็นระบบ เพื่อการเคลื่อนไหวที่ราบรื่นในระดับสากล">
-  </p>
-</section>
-
-<section id="services" style="background:var(--light);">
-  <h2 data-en="Our Services" data-th="บริการของเรา">Our Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>International Logistics</h3>
-      <p>Air · Sea · Land Worldwide</p>
-    </div>
-
-    <div class="card">
-      <h3>Import & Export</h3>
-      <p>Customs & Documentation</p>
-    </div>
-
-    <div class="card">
-      <h3>Global Sourcing</h3>
-      <p>Worldwide Product Procurement</p>
-    </div>
-
-    <div class="card">
-      <h3>Trading Services</h3>
-      <p>Professional Intermediary</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2 data-en="Contact Us" data-th="ติดต่อเรา">Contact Us</h2>
-
-  <a class="contact-btn whatsapp"
-     href="https://wa.me/66921563555"
-     target="_blank">
-     WhatsApp
-  </a>
-</section>
-
-<footer>
-  © 2025 Tao Global Services · Connected with Purpose · Moving with Precision
-</footer>
-
-<script>
-let isTH = false;
-
-function toggleLang(){
-  isTH = !isTH;
-  document.querySelectorAll('[data-en]').forEach(el=>{
-    el.textContent = isTH ? el.dataset.th : el.dataset.en;
-  });
-}
-</script>
-
-</body>
-</html>
-
-
-
+    <img src="logo.png" alt="Tao Glob
