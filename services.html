@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Services | Tao Global Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:#222;
+  line-height:1.6;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 30px;
+  border-bottom:1px solid #eee;
+  flex-wrap:wrap;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{height:70px}
+
+nav a{
+  margin-left:18px;
+  text-decoration:none;
+  color:#222;
+  font-size:14px;
+}
+
+.lang-btn{
+  margin-left:18px;
+  border:1px solid #ccc;
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+header{
+  text-align:center;
+  padding:70px 20px;
+  background:#f7f7f7;
+}
+
+header h1{
+  font-size:clamp(28px,5vw,42px);
+}
+
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  border:1px solid #eee;
+  border-radius:16px;
+  padding:30px;
+  transition:.3s;
+  background:#fff;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+}
+
+.card h3{
+  margin-top:0;
+}
+
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:24px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="Tao Global Services">
+    <strong>Tao Global Services</strong>
+  </div>
+
+  <div>
+    <a href="index.html" data-en="Home" data-th="หน้าแรก">Home</a>
+    <a href="services.html" data-en="Services" data-th="การให้บริการ">Services</a>
+    <a href="index.html#contact" data-en="Contact" data-th="ติดต่อ">Contact</a>
+    <span class="lang-btn" onclick="toggleLang()">TH / EN</span>
+  </div>
+</nav>
+
+<header>
+  <h1
+    data-en="Our Services"
+    data-th="การให้บริการของเรา">
+    Our Services
+  </h1>
+
+  <p
+    data-en="Professional global logistics and trading services delivered with clarity, coordination, and proper timing."
+    data-th="บริการด้านโลจิสติกส์และการค้าระหว่างประเทศ ดำเนินงานด้วยความชัดเจน การประสานงาน และจังหวะที่เหมาะสม">
+  </p>
+</header>
+
+<section>
+  <div class="services">
+
+    <div class="card">
+      <h3 data-en="International Logistics" data-th="โลจิสติกส์ระหว่างประเทศ">
+        International Logistics
+      </h3>
+      <p
+        data-en="Air, sea, and land transportation with coordinated planning and reliable partners."
+        data-th="การขนส่งทางอากาศ ทางเรือ และทางบก ด้วยการวางแผนและพันธมิตรที่เชื่อถือได้">
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 data-en="Import & Export Management" data-th="การจัดการนำเข้า–ส่งออก">
+        Import & Export Management
+      </h3>
+      <p
+        data-en="Documentation, customs coordination, and regulatory support."
+        data-th="ดูแลเอกสาร พิธีการศุลกากร และข้อกำหนดทางการค้า">
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 data-en="Global Sourcing" data-th="การจัดหาสินค้าจากต่างประเทศ">
+        Global Sourcing
+      </h3>
+      <p
+        data-en="Connecting buyers with reliable manufacturers and suppliers worldwide."
+        data-th="เชื่อมโยงผู้ซื้อกับผู้ผลิตและซัพพลายเออร์ที่เชื่อถือได้ทั่วโลก">
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 data-en="Trading & Intermediary Services" data-th="บริการตัวกลางทางการค้า">
+        Trading & Intermediary Services
+      </h3>
+      <p
+        data-en="Professional intermediary support for cross-border transactions."
+        data-th="บริการตัวกลางทางธุรกิจ สำหรับการซื้อขายระหว่างประเทศอย่างมืออาชีพ">
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Tao Global Services · Trusted Global Coordination
+</footer>
+
+<script>
+let currentLang = localStorage.getItem("lang") || "en";
+
+function applyLang(){
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.textContent = currentLang === "th" ? el.dataset.th : el.dataset.en;
+  });
+}
+
+function toggleLang(){
+  currentLang = currentLang === "en" ? "th" : "en";
+  localStorage.setItem("lang", currentLang);
+  applyLang();
+}
+
+applyLang();
+</script>
+
+</body>
+</html>
