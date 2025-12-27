@@ -52,3 +52,231 @@ nav a{
   width:150px;
   animation:fadeDown 1.8s ease;
 }
+
+.gold-line{
+  width:120px;
+  height:2px;
+  background:var(--gold);
+  margin:18px auto 24px;
+}
+
+.header h1{
+  font-size:36px;
+  margin:0;
+}
+
+.header p{
+  max-width:760px;
+  margin:16px auto 0;
+  color:var(--gray);
+  line-height:1.8;
+  font-size:16px;
+}
+
+/* SERVICES */
+section{
+  padding:70px 20px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.card{
+  border:1px solid #eee;
+  border-radius:20px;
+  padding:38px 30px;
+  background:#fff;
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.icon{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.card p{
+  color:#444;
+}
+
+.moo{
+  font-size:14px;
+  color:#555;
+  line-height:1.7;
+  margin-top:14px;
+  background:#faf8f2;
+  padding:14px;
+  border-left:3px solid var(--gold);
+  border-radius:8px;
+}
+
+.card a{
+  display:inline-block;
+  margin-top:24px;
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+  border-bottom:1px solid var(--gold);
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  background:var(--light);
+  padding:70px 20px;
+}
+
+.cta h2{
+  font-size:30px;
+}
+
+.cta p{
+  color:var(--gray);
+  line-height:1.8;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 40px;
+  background:var(--black);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:15px;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  font-size:15px;
+}
+
+/* ANIMATION */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-24px)}
+  to{opacity:1;transform:none}
+}
+
+@media(max-width:600px){
+  .header h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong>Tao Global Services</strong>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="quote.html">Quotation</a>
+  </div>
+</nav>
+
+<header class="header">
+  <img src="logo.png" alt="Tao Global Services Logo">
+  <div class="gold-line"></div>
+
+  <h1>Our Services</h1>
+  <p>
+    Services aligned with clarity, balance, and proper timing<br>
+    บริการที่ออกแบบให้สอดคล้องจังหวะธุรกิจ เสริมพลังการเจรจา และความมั่นคงระยะยาว
+  </p>
+</header>
+
+<section>
+  <div class="services">
+
+    <!-- SERVICE 1 -->
+    <div class="card">
+      <div class="icon">🌏</div>
+      <h3>Global Sourcing</h3>
+      <p>OEM sourcing and supplier coordination across regions.</p>
+      <div class="moo">
+        🔮 <strong>มงคลธุรกิจ:</strong>  
+        เลือกแหล่งผลิตที่ “ถูกจังหวะ” ลดแรงต้าน เพิ่มอำนาจต่อรอง  
+        <br><em>EN:</em> Right sourcing brings smooth negotiation and sustainable margins.
+      </div>
+      <a href="service-sourcing.html">View details →</a>
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Import & Export Coordination</h3>
+      <p>Documentation, customs, and cross-border coordination.</p>
+      <div class="moo">
+        🔮 <strong>มงคลการดำเนินงาน:</strong>  
+        เอกสารครบ เส้นทางโล่ง เงินหมุนไม่สะดุด  
+        <br><em>EN:</em> Clear process creates flow and financial stability.
+      </div>
+      <a href="service-import-export.html">View details →</a>
+    </div>
+
+    <!-- SERVICE 3 -->
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Trading Intermediary</h3>
+      <p>Professional intermediary for international trade.</p>
+      <div class="moo">
+        🔮 <strong>มงคลความสัมพันธ์:</strong>  
+        ตัวกลางที่ดีปรับสมดุลทุกฝ่าย ปิดดีลง่าย  
+        <br><em>EN:</em> Trusted mediation builds long-term partnerships.
+      </div>
+      <a href="service-trading.html">View details →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Start with the Right Direction</h2>
+  <p>
+    The right timing, alignment, and trusted coordination<br>
+    เริ่มต้นธุรกิจด้วยทิศทางที่เหมาะสม และจังหวะที่ลงตัว
+  </p>
+  <a class="btn" href="quote.html">Request Quotation</a>
+</section>
+
+<footer>
+© 2025 Tao Global Services · Balance · Timing · Trust
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/66921563555" target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
