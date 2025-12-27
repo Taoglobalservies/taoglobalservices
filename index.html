@@ -11,7 +11,7 @@
 <meta name="author" content="Tao Global Services">
 
 <meta property="og:title" content="Tao Global Services">
-<meta property="og:description" content="Trade with clarity, timing, and trusted coordination">
+<meta property="og:description" content="Trade with clarity, proper timing, and trusted coordination">
 <meta property="og:image" content="logo.png">
 <meta property="og:type" content="website">
 
@@ -30,7 +30,6 @@ body{
   font-family:Arial, Helvetica, sans-serif;
   color:#222;
   background:#fff;
-  line-height:1.6;
 }
 
 /* NAV */
@@ -51,7 +50,7 @@ nav{
 }
 
 .logo img{
-  height:80px;
+  height:150px;
   animation:logoFade 1.6s ease;
 }
 
@@ -79,24 +78,22 @@ nav a{
 
 .hero h1{
   font-size:clamp(30px,5vw,44px);
-  margin-bottom:10px;
 }
 
 .hero p{
   color:var(--gray);
   font-size:17px;
   max-width:760px;
-  margin:0 auto;
+  margin:10px auto;
 }
 
 .bless{
   margin-top:30px;
   font-size:15px;
-  color:#444;
   line-height:1.8;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
   display:inline-block;
   margin:30px 10px 0;
@@ -113,7 +110,7 @@ nav a{
   border:1px solid var(--gold);
 }
 
-/* SECTION */
+/* SERVICES */
 section{
   padding:70px 20px;
   text-align:center;
@@ -125,14 +122,13 @@ section{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:26px;
   max-width:1000px;
-  margin-inline:auto;
+  margin:auto;
 }
 
 .card{
   border:1px solid #eee;
   padding:30px;
   border-radius:16px;
-  background:#fff;
   transition:.3s;
 }
 
@@ -151,7 +147,6 @@ section{
   padding:14px 18px;
   border-radius:30px;
   text-decoration:none;
-  font-size:14px;
   box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
@@ -160,17 +155,15 @@ footer{
   background:#111;
   color:#aaa;
   padding:25px;
-  font-size:14px;
   text-align:center;
 }
 
 /* ANIMATION */
 @keyframes logoFade{
   from{opacity:0;transform:translateY(-10px)}
-  to{opacity:1;transform:none}
+  to{opacity:1}
 }
 
-/* MOBILE */
 @media(max-width:600px){
   nav{flex-direction:column;gap:12px}
   .logo img{height:70px}
@@ -189,7 +182,7 @@ footer{
   <div>
     <a href="services.html">Services</a>
     <a href="quote.html">Quotation</a>
-    <a href="mailto:info@taoglobalservices.com?subject=Business Inquiry - Tao Global Services">Email</a>
+    <a href="quote.html">Email</a>
   </div>
 </nav>
 
@@ -204,7 +197,7 @@ footer{
   <div class="bless">
     ดำเนินธุรกิจด้วยจังหวะที่เหมาะสม ความชัดเจน และความไว้วางใจ  
     <br>
-    เสริมพลังการค้าให้ราบรื่น เจรจาง่าย ปิดดีลได้จริง
+    เสริมพลังการค้าให้เจรจาง่าย ปิดดีลราบรื่น
   </div>
 
   <a class="btn" href="quote.html">Request Quotation</a>
@@ -217,17 +210,17 @@ footer{
   <div class="services">
     <div class="card">
       <h3>Global Sourcing</h3>
-      <p>Verified suppliers & OEM coordination</p>
+      <p>OEM & verified suppliers</p>
     </div>
 
     <div class="card">
       <h3>Import & Export Coordination</h3>
-      <p>Structured documentation & customs process</p>
+      <p>Documentation & customs</p>
     </div>
 
     <div class="card">
       <h3>Trading Intermediary</h3>
-      <p>Professional cross-border facilitation</p>
+      <p>Cross-border facilitation</p>
     </div>
   </div>
 </section>
@@ -237,7 +230,7 @@ footer{
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/66921563555" target="_blank">
-  WhatsApp
+WhatsApp
 </a>
 
 </body>
