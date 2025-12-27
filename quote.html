@@ -1,8 +1,69 @@
-<h1>Request Quotation</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Request Quotation | Tao Global Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<form action="mailto:info@taoglobalservices.com" method="post" enctype="text/plain">
-<input name="Name" placeholder="Your Name"><br><br>
-<input name="Email" placeholder="Email"><br><br>
-<textarea name="Detail" placeholder="Your request"></textarea><br><br>
-<button type="submit">Send</button>
-</form>
+<style>
+body{font-family:Arial;margin:0;background:#faf8f2}
+.container{max-width:600px;margin:80px auto;background:#fff;padding:40px;border-radius:20px}
+h1{text-align:center}
+input,textarea,select{
+  width:100%;
+  padding:14px;
+  margin-top:14px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:14px;
+}
+button{
+  margin-top:24px;
+  padding:14px;
+  width:100%;
+  background:#c9a24d;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:600;
+}
+.nav{
+  text-align:center;
+  margin-top:20px;
+}
+.nav a{
+  text-decoration:none;
+  margin:0 12px;
+  color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Request Quotation</h1>
+  <p style="text-align:center;color:#555">
+    Clear information leads to smooth coordination and positive outcomes.
+  </p>
+
+  <form action="mailto:info@taoglobalservices.com" method="post" enctype="text/plain">
+    <input name="Name" placeholder="Your Name" required>
+    <input name="Email" placeholder="Email" required>
+    <select name="Service">
+      <option>Import & Export</option>
+      <option>Global Sourcing</option>
+      <option>Trading Intermediary</option>
+    </select>
+    <textarea name="Details" placeholder="Describe your requirement"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+
+  <div class="nav">
+    <a href="index.html">Home</a> |
+    <a href="services.html">Services</a>
+  </div>
+</div>
+
+</body>
+</html>
