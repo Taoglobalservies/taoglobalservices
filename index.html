@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<meta name="description" content="Tao Global Services provides global sourcing, import export coordination, and trading intermediary services based in Bangkok, Thailand.">
-<meta name="keywords" content="global sourcing thailand, import export service, trading intermediary, OEM sourcing asia">
+<meta name="description" content="Tao Global Services – Driven by clarity. Built on trust. Global sourcing, import-export coordination and trading intermediary based in Bangkok, Thailand.">
+<meta name="keywords" content="global sourcing thailand, import export coordination, trading intermediary, OEM sourcing asia">
 <meta name="author" content="Tao Global Services">
 
-<meta property="og:title" content="TGS">
-<meta property="og:description" content="Trade with clarity, proper timing, and trusted coordination">
+<meta property="og:title" content="Tao Global Services">
+<meta property="og:description" content="Driven by clarity. Built on trust.">
 <meta property="og:image" content="logo.png">
 <meta property="og:type" content="website">
 
@@ -35,69 +35,54 @@ body{
 /* NAV */
 nav{
   display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 30px;
+  justify-content:center;
+  gap:28px;
+  padding:14px 20px;
   border-bottom:1px solid #eee;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  text-decoration:none;
-  color:inherit;
-}
-
-.logo img{
-  height:150px;
-  animation:logoFade 1.6s ease;
-}
-
-.logo-text{
-  font-size:14px;
-  font-weight:600;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  opacity:.8;
-}
-
 nav a{
-  margin-left:18px;
   text-decoration:none;
   color:#222;
   font-size:14px;
 }
 
-/* HERO */
-.hero{
+/* HEADER / BRAND */
+header{
   text-align:center;
-  padding:90px 20px;
+  padding:90px 20px 80px;
   background:linear-gradient(to bottom,#f7f7f7,#fff);
 }
 
-.hero h1{
-  font-size:clamp(30px,5vw,44px);
+header img{
+  width:150px;
+  animation:fade 1.6s ease;
 }
 
-.hero p{
+.gold-line{
+  width:120px;
+  height:2px;
+  background:var(--gold);
+  margin:20px auto;
+}
+
+header h1{
+  font-size:clamp(30px,5vw,44px);
+  margin:10px 0;
+}
+
+header p{
   color:var(--gray);
   font-size:17px;
   max-width:760px;
   margin:10px auto;
 }
 
-.bless{
-  margin-top:30px;
-  font-size:15px;
-  line-height:1.8;
-}
-
 /* BUTTON */
 .btn{
   display:inline-block;
   margin:30px 10px 0;
-  padding:14px 40px;
+  padding:14px 42px;
   background:var(--black);
   color:#fff;
   border-radius:30px;
@@ -110,7 +95,7 @@ nav a{
   border:1px solid var(--gold);
 }
 
-/* SERVICES */
+/* SECTION */
 section{
   padding:70px 20px;
   text-align:center;
@@ -127,7 +112,7 @@ section{
 
 .card{
   border:1px solid #eee;
-  padding:30px;
+  padding:32px;
   border-radius:16px;
   transition:.3s;
 }
@@ -137,7 +122,15 @@ section{
   box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
-/* WHATSAPP FLOAT */
+/* FOOTER */
+footer{
+  background:#111;
+  color:#aaa;
+  padding:25px;
+  text-align:center;
+}
+
+/* WHATSAPP */
 .whatsapp-float{
   position:fixed;
   right:18px;
@@ -150,23 +143,14 @@ section{
   box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
-/* FOOTER */
-footer{
-  background:#111;
-  color:#aaa;
-  padding:25px;
-  text-align:center;
-}
-
 /* ANIMATION */
-@keyframes logoFade{
-  from{opacity:0;transform:translateY(-10px)}
+@keyframes fade{
+  from{opacity:0;transform:translateY(-12px)}
   to{opacity:1}
 }
 
 @media(max-width:600px){
-  nav{flex-direction:column;gap:12px}
-  .logo img{height:70px}
+  header img{width:120px}
 }
 </style>
 </head>
@@ -174,33 +158,22 @@ footer{
 <body>
 
 <nav>
-  <a href="index.html" class="logo">
-    <img src="logo.png" alt="Tao Global Services">
-    <span class="logo-text">Tao Global Services</span>
-  </a>
-
-  <div>
-    <a href="services.html">Services</a>
-    <a href="quote.html">Quotation</a>
-    <a href="quote.html">Email</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="quote.html">Information</a>
 </nav>
 
-<header class="hero">
-  <h1>Clear processes. Reliable execution. Trusted partnerships</h1>
+<header>
+  <img src="logo.png" alt="Tao Global Services">
+  <div class="gold-line"></div>
 
+  <h1>Driven by clarity. Built on trust.</h1>
   <p>
-    We operate with clear standards, precise execution, and long-term trust.
+    ขับเคลื่อนธุรกิจด้วยความชัดเจน และตั้งอยู่บนความไว้วางใจ
   </p>
 
-  <div class="bless">
-    เราดำเนินธุรกิจด้วยมาตรฐานที่ชัดเจน การทำงานที่แม่นยำ และความไว้วางใจระยะยาว  
-    <br>
-    
-  </div>
-
-  <a class="btn" href="quote.html">Request Quotation</a>
-  <a class="btn btn-outline" href="services.html">View Services</a>
+  <a class="btn" href="services.html">View Services</a>
+  <a class="btn btn-outline" href="quote.html">Request Information</a>
 </header>
 
 <section>
@@ -209,23 +182,35 @@ footer{
   <div class="services">
     <div class="card">
       <h3>Global Sourcing</h3>
-      <p>OEM & verified suppliers</p>
+      <p>
+        Strategic sourcing with verified suppliers  
+        <br>
+        <em>คัดสรรด้วยจังหวะและความเหมาะสม</em>
+      </p>
     </div>
 
     <div class="card">
       <h3>Import & Export Coordination</h3>
-      <p>Documentation & customs</p>
+      <p>
+        Documentation, compliance, and execution  
+        <br>
+        <em>ถูกต้อง ชัดเจน และราบรื่น</em>
+      </p>
     </div>
 
     <div class="card">
       <h3>Trading Intermediary</h3>
-      <p>Cross-border facilitation</p>
+      <p>
+        Trusted cross-border facilitation  
+        <br>
+        <em>ตัวกลางที่ดี นำพาธุรกิจไปข้างหน้า</em>
+      </p>
     </div>
   </div>
 </section>
 
 <footer>
-© 2025 Tao Global Services · Balance · Timing · Trust
+© 2025 Tao Global Services · Clarity · Timing · Trust
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/66921563555" target="_blank">
@@ -234,7 +219,3 @@ WhatsApp
 
 </body>
 </html>
-
-
-
-
