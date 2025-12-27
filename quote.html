@@ -1,75 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Request Quotation | Tao Global Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Request quotation for global sourcing, import export coordination and trading intermediary services.">
+
 <style>
-body{font-family:Arial;margin:0;background:#faf8f2}
-.container{max-width:600px;margin:80px auto;background:#fff;padding:40px;border-radius:20px}
-h1{text-align:center}
-input,textarea,select{
-  width:100%;
-  padding:14px;
-  margin-top:14px;
-  border:1px solid #ccc;
-  border-radius:10px;
+:root{
+  --gold:#c9a24d;
+  --black:#111;
+  --gray:#666;
+  --bg:#faf8f2;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:#222;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 30px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+
+nav a{
+  text-decoration:none;
+  color:#000;
+  margin-left:18px;
   font-size:14px;
 }
-button{
-  margin-top:24px;
+
+/* CONTAINER */
+.container{
+  max-width:820px;
+  margin:60px auto;
+  background:#fff;
+  padding:50px 30px;
+  border-radius:22px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+/* LOGO + MUI */
+.header-logo{
+  text-align:center;
+  animation:fadeUp 1.6s ease;
+}
+
+.header-logo img{
+  width:130px;
+}
+
+.gold-line{
+  width:120px;
+  height:2px;
+  background:var(--gold);
+  margin:18px auto;
+}
+
+.bless-text{
+  text-align:center;
+  font-size:14px;
+  color:var(--gray);
+  line-height:1.7;
+}
+
+/* FORM */
+h1{text-align:center;margin-top:40px}
+
+form{
+  display:grid;
+  gap:18px;
+  margin-top:30px;
+}
+
+label{font-size:14px}
+
+input, textarea, select{
   padding:14px;
-  width:100%;
-  background:#c9a24d;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+button{
+  margin-top:20px;
+  padding:16px;
   border:none;
   border-radius:30px;
-  font-size:16px;
-  font-weight:600;
+  background:var(--black);
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
 }
-.nav{
-  text-align:center;
-  margin-top:20px;
-}
-.nav a{
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:30px;
   text-decoration:none;
-  margin:0 12px;
-  color:#000;
+  font-size:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#888;
+}
+
+@media(max-width:600px){
+  .container{margin:30px 15px;padding:30px 20px}
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <strong>Tao Global Services</strong>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+  </div>
+</nav>
+
 <div class="container">
 
+  <!-- LOGO -->
   <div class="header-logo">
-    <img src="logo.png" alt="Tao Global Services Logo">
+    <img src="logo.png" alt="Tao Global Services">
+    <div class="gold-line"></div>
+    <div class="bless-text">
+      ดำเนินการค้าด้วยจังหวะที่เหมาะสม ความชัดเจน และความไว้วางใจ  
+      <br>
+      Trade with clarity, proper timing, and trusted alignment
+    </div>
   </div>
 
   <h1>Request Quotation</h1>
 
-  <p style="text-align:center;color:#555">
-    Clear information leads to smooth coordination and positive outcomes.
-  </p>
+  <!-- ⚠️ เปลี่ยน action เป็น URL จาก Formspree ของคุณ -->
+  <form action="https://formspree.io/f/xxxxabcd" method="POST">
 
-  <form action="mailto:info@taoglobalservices.com" method="post" enctype="text/plain">
-    <input name="Name" placeholder="Your Name" required>
-    <input name="Email" placeholder="Email" required>
-    <select name="Service">
-      <option>Import & Export</option>
+    <label>Name / Company</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>WhatsApp / Phone</label>
+    <input type="text" name="contact">
+
+    <label>Service Required</label>
+    <select name="service">
       <option>Global Sourcing</option>
+      <option>Import & Export Coordination</option>
       <option>Trading Intermediary</option>
     </select>
-    <textarea name="Details" placeholder="Describe your requirement"></textarea>
-    <button type="submit">Send Request</button>
+
+    <label>Details</label>
+    <textarea name="message" rows="5"></textarea>
+
+    <button type="submit">Send Quotation Request</button>
   </form>
 
-  <div class="nav">
-    <a href="index.html">Home</a> |
-    <a href="services.html">Services</a>
-  </div>
 </div>
+
+<a class="whatsapp-float" href="https://wa.me/66921563555" target="_blank">
+  WhatsApp
+</a>
+
+<footer>
+© 2025 Tao Global Services · Balance · Timing · Trust
+</footer>
 
 </body>
 </html>
