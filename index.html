@@ -5,135 +5,31 @@
 <title>Tao Global Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<meta name="description" content="Tao Global Services provides global sourcing, import export coordination, and trading intermediary services based in Bangkok, Thailand.">
+<meta name="description" content="Tao Global Services provides global sourcing, trading intermediary and import export coordination based in Thailand.">
 <meta name="keywords" content="global sourcing thailand, trading intermediary, import export coordination">
 <meta name="author" content="Tao Global Services">
 
 <style>
 :root{
-  --primary:#0b0b0b;   /* ดำ = ความมั่นคง */
-  --accent:#c9a24d;    /* ทอง = เงิน โอกาส */
+  --primary:#0b0b0b;
+  --accent:#c9a24d;
   --light:#f7f7f7;
-  --text:#222;
 }
-
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  color:var(--text);
-  line-height:1.6;
-}
-
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 30px;
-  border-bottom:1px solid #eee;
-  flex-wrap:wrap;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.logo img{height:72px}
-
-nav a{
-  margin-left:18px;
-  text-decoration:none;
-  color:#000;
-  font-size:14px;
-}
-
-.lang-btn{
-  border:1px solid #ccc;
-  padding:4px 12px;
-  border-radius:20px;
-  font-size:13px;
-  cursor:pointer;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:100px 20px;
-  background:linear-gradient(to bottom,#faf8f2,#fff);
-}
-
-.hero h1{
-  font-size:clamp(30px,5vw,44px);
-  margin-bottom:12px;
-}
-
-.hero p{
-  max-width:760px;
-  margin:0 auto;
-  color:#555;
-  font-size:17px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin:20px 10px 0;
-  padding:14px 40px;
-  background:var(--accent);
-  color:#000;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* SECTION */
-section{
-  padding:70px 20px;
-  text-align:center;
-}
-
-section p{
-  max-width:760px;
-  margin:12px auto 0;
-  color:#555;
-}
-
-/* CONTACT */
-.contact{
-  background:var(--light);
-}
-
-.contact a{
-  display:inline-block;
-  margin:12px;
-  padding:14px 34px;
-  border-radius:30px;
-  text-decoration:none;
-  color:#fff;
-  font-size:15px;
-}
-
+body{margin:0;font-family:Arial;color:#222}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 30px;border-bottom:1px solid #eee}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:90px}
+nav a{text-decoration:none;color:#000;margin-left:18px;font-size:14px}
+.hero{text-align:center;padding:110px 20px;background:linear-gradient(#faf8f2,#fff)}
+.hero h1{font-size:clamp(30px,5vw,44px)}
+.hero p{max-width:760px;margin:auto;color:#555}
+.btn{display:inline-block;margin:20px 10px;padding:14px 40px;background:var(--accent);color:#000;border-radius:30px;text-decoration:none;font-weight:600}
+section{text-align:center;padding:70px 20px}
+.contact{background:var(--light)}
+.contact a{display:inline-block;margin:12px;padding:14px 34px;border-radius:30px;color:#fff;text-decoration:none}
 .whatsapp{background:#25D366}
 .email{background:#000}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:#aaa;
-  padding:25px;
-  font-size:14px;
-  text-align:center;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  nav{justify-content:center;gap:12px}
-}
+footer{background:#111;color:#aaa;text-align:center;padding:25px;font-size:14px}
 </style>
 </head>
 
@@ -141,93 +37,44 @@ footer{
 
 <nav>
   <div class="logo">
-    <img src="logo.png" alt="Tao Global Services">
+    <img src="logo.png">
     <strong>Tao Global Services</strong>
   </div>
-
   <div>
-    <a href="index.html" data-en="Home" data-th="หน้าแรก">Home</a>
-    <a href="services.html" data-en="Services" data-th="การให้บริการ">Services</a>
-    <a href="quote.html" data-en="Quotation" data-th="ขอใบเสนอราคา">Quotation</a>
-    <span class="lang-btn" onclick="toggleLang()">TH / EN</span>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="quote.html">Quotation</a>
   </div>
 </nav>
 
-<header class="hero">
-  <h1
-    data-en="Global Trading in the Right Direction"
-    data-th="การค้าระดับโลก ที่ดำเนินไปในทิศทางที่เหมาะสม">
-    Global Trading in the Right Direction
-  </h1>
-
-  <p
-    data-en="We believe that successful trade begins with clarity, alignment, and proper timing — creating smooth transactions and long-term trust."
-    data-th="เราเชื่อว่าความสำเร็จทางการค้า เริ่มจากความชัดเจน ความสอดคล้อง และจังหวะที่เหมาะสม เพื่อให้การซื้อขายราบรื่นและเกิดความเชื่อมั่นในระยะยาว">
+<div class="hero">
+  <h1>Global Trading in the Right Direction</h1>
+  <p>
+    Successful trade begins with clarity, proper timing, and trusted coordination —
+    creating smooth transactions and long-term growth.
   </p>
-
-  <a class="btn" href="services.html"
-     data-en="View Services"
-     data-th="ดูบริการ">
-     View Services
-  </a>
-
-  <a class="btn" href="quote.html"
-     data-en="Request Quotation"
-     data-th="ขอใบเสนอราคา">
-     Request Quotation
-  </a>
-</header>
+  <a class="btn" href="services.html">View Services</a>
+  <a class="btn" href="quote.html">Request Quotation</a>
+</div>
 
 <section>
-  <h2 data-en="Why Tao Global Services" data-th="ทำไมต้อง Tao Global Services"></h2>
-
-  <p
-    data-en="Our approach emphasizes balance, coordination, and trustworthy connections — supporting smooth negotiations, reduced friction, and positive outcomes for all parties."
-    data-th="แนวทางการทำงานของเราให้ความสำคัญกับความสมดุล การประสานงาน และความน่าเชื่อถือ เพื่อช่วยให้การเจรจาง่ายขึ้น ลดอุปสรรค และนำไปสู่ผลลัพธ์ที่ดีสำหรับทุกฝ่าย">
-  </p>
-
-  <p
-    data-en="This philosophy supports stable growth, strong partnerships, and business continuity."
-    data-th="แนวคิดนี้ช่วยเสริมการเติบโตอย่างมั่นคง ความสัมพันธ์ทางธุรกิจที่ยั่งยืน และความต่อเนื่องในการค้าขาย">
+  <h2>Why Tao Global Services</h2>
+  <p>
+    We focus on balance, alignment, and trustworthy connections.
+    This approach supports easier negotiation, reduced friction,
+    and positive outcomes for all parties.
   </p>
 </section>
 
 <section class="contact">
-  <h2 data-en="Contact Us" data-th="ติดต่อเรา">Contact Us</h2>
-
-  <a class="whatsapp"
-     href="https://wa.me/66921563555"
-     target="_blank">
-     WhatsApp
-  </a>
-
-  <a class="email"
-     href="mailto:info@taoglobalservices.com">
-     Email
-  </a>
+  <h2>Contact Us</h2>
+  <a class="whatsapp" href="https://wa.me/66921563555" target="_blank">WhatsApp</a>
+  <a class="email" href="mailto:info@taoglobalservices.com">Email</a>
 </section>
 
 <footer>
-  © 2025 Tao Global Services · Trusted Coordination · Sustainable Growth
+© 2025 Tao Global Services · Trusted Coordination · Sustainable Growth
 </footer>
-
-<script>
-let currentLang = localStorage.getItem("lang") || "en";
-
-function applyLang(){
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    el.textContent = currentLang === "th" ? el.dataset.th : el.dataset.en;
-  });
-}
-
-function toggleLang(){
-  currentLang = currentLang === "en" ? "th" : "en";
-  localStorage.setItem("lang", currentLang);
-  applyLang();
-}
-
-applyLang();
-</script>
 
 </body>
 </html>
