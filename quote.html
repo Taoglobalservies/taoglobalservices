@@ -19,14 +19,12 @@ body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:var(--bg);
-  color:#222;
 }
 
 /* NAV */
 nav{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:16px 30px;
   background:#fff;
   border-bottom:1px solid #eee;
@@ -36,7 +34,6 @@ nav a{
   text-decoration:none;
   color:#000;
   margin-left:18px;
-  font-size:14px;
 }
 
 /* CONTAINER */
@@ -49,14 +46,14 @@ nav a{
   box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-/* LOGO + MUI */
+/* LOGO */
 .header-logo{
   text-align:center;
   animation:fadeUp 1.6s ease;
 }
 
 .header-logo img{
-  width:130px;
+  width:150px;
 }
 
 .gold-line{
@@ -82,13 +79,10 @@ form{
   margin-top:30px;
 }
 
-label{font-size:14px}
-
 input, textarea, select{
   padding:14px;
   border-radius:12px;
   border:1px solid #ccc;
-  font-size:14px;
 }
 
 button{
@@ -98,11 +92,9 @@ button{
   border-radius:30px;
   background:var(--black);
   color:#fff;
-  font-size:15px;
-  cursor:pointer;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp-float{
   position:fixed;
   right:18px;
@@ -112,25 +104,18 @@ button{
   padding:14px 18px;
   border-radius:30px;
   text-decoration:none;
-  font-size:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 /* ANIMATION */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:none}
+  to{opacity:1}
 }
 
 footer{
   text-align:center;
   padding:30px;
-  font-size:14px;
   color:#888;
-}
-
-@media(max-width:600px){
-  .container{margin:30px 15px;padding:30px 20px}
 }
 </style>
 </head>
@@ -147,40 +132,34 @@ footer{
 
 <div class="container">
 
-  <!-- LOGO -->
   <div class="header-logo">
     <img src="logo.png" alt="Tao Global Services">
     <div class="gold-line"></div>
     <div class="bless-text">
-      ดำเนินการค้าด้วยจังหวะที่เหมาะสม ความชัดเจน และความไว้วางใจ  
+      ดำเนินการค้าด้วยความชัดเจน และจังหวะที่เหมาะสม  
       <br>
-      Trade with clarity, proper timing, and trusted alignment
+      Trade with clarity, timing, and trusted alignment
     </div>
   </div>
 
   <h1>Request Quotation</h1>
 
-  <!-- ⚠️ เปลี่ยน action เป็น URL จาก Formspree ของคุณ -->
-  <form action="https://formspree.io/f/xxxxabcd" method="POST">
+  <form action="https://formspree.io/f/mojqeqaz" method="POST">
 
-    <label>Name / Company</label>
-    <input type="text" name="name" required>
+    <input type="hidden" name="_subject" value="New Quotation Request - Tao Global Services">
+    <input type="text" name="_gotcha" style="display:none">
 
-    <label>Email</label>
-    <input type="email" name="email" required>
+    <input type="text" name="name" placeholder="Name / Company" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="contact" placeholder="WhatsApp / Phone">
 
-    <label>WhatsApp / Phone</label>
-    <input type="text" name="contact">
-
-    <label>Service Required</label>
     <select name="service">
       <option>Global Sourcing</option>
       <option>Import & Export Coordination</option>
       <option>Trading Intermediary</option>
     </select>
 
-    <label>Details</label>
-    <textarea name="message" rows="5"></textarea>
+    <textarea name="message" rows="5" placeholder="Details"></textarea>
 
     <button type="submit">Send Quotation Request</button>
   </form>
@@ -188,11 +167,11 @@ footer{
 </div>
 
 <a class="whatsapp-float" href="https://wa.me/66921563555" target="_blank">
-  WhatsApp
+WhatsApp
 </a>
 
 <footer>
-© 2025 Tao Global Services · Balance · Timing · Trust
+© 2025 Tao Global Services
 </footer>
 
 </body>
