@@ -1,222 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Tao Global Services | Global Sourcing & Trading</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tao Global Services | Expert Sourcing & OEM from Thailand</title>
+  <meta name="description" content="Tao Global Services connects international businesses with verified Thai suppliers, providing sourcing, OEM branding, and logistics solutions. / Tao Global Services เชื่อมต่อธุรกิจต่างประเทศกับผู้ผลิตไทยที่ผ่านการตรวจสอบ บริการสรรหา OEM และโลจิสติกครบวงจร">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
+    body { background-color: #fff; color: #333; line-height: 1.6; }
 
-<!-- SEO -->
-<meta name="description" content="Tao Global Services – Driven by clarity. Built on trust. Global sourcing, import-export coordination and trading intermediary based in Bangkok, Thailand.">
-<meta name="keywords" content="global sourcing thailand, import export coordination, trading intermediary, OEM sourcing asia">
-<meta name="author" content="Tao Global Services">
+    a { text-decoration: none; color: inherit; }
 
-<meta property="og:title" content="Tao Global Services">
-<meta property="og:description" content="Driven by clarity. Built on trust.">
-<meta property="og:image" content="logo.png">
-<meta property="og:type" content="website">
+    /* Header */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 10; }
+    header img { width: 160px; }
+    nav a { margin-left: 30px; font-weight: 600; color: #333; }
 
-<style>
-:root{
-  --black:#111;
-  --gold:#c9a24d;
-  --gray:#666;
-  --light:#f7f7f7;
-}
+    /* Hero */
+    .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('hero-bg.jpg') no-repeat center/cover; }
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; }
+    .hero button { background: #007bff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+    .hero button:hover { background: #0056b3; }
 
-*{box-sizing:border-box}
+    /* Services */
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 60px 40px; }
+    .service-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .service-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .service-card h3 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; }
+    .service-card p { color: #555; }
 
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  color:#222;
-  background:#fff;
-}
+    /* Trust Section */
+    .trust { padding: 60px 40px; background: #f8f8f8; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .trust h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 40px; font-size: 2rem; }
+    .trust ul { list-style: none; max-width: 800px; }
+    .trust li { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: center; }
+    .trust li::before { content: '✔'; color: #ffcc00; margin-right: 10px; font-weight: bold; }
 
-/* NAV */
-nav{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  padding:14px 20px;
-  border-bottom:1px solid #eee;
-}
+    /* Contact Section */
+    .contact { padding: 60px 40px; display: flex; justify-content: center; align-items: center; background: #fff; }
+    .contact form { background: #f8f8f8; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 500px; width: 100%; }
+    .contact form h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 20px; text-align: center; }
+    .contact form input, .contact form textarea { width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
+    .contact form button { background: #28a745; color: #fff; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; width: 100%; }
+    .contact form button:hover { background: #1e7e34; }
 
-nav a{
-  text-decoration:none;
-  color:#222;
-  font-size:14px;
-}
+    /* Footer */
+    footer { text-align: center; padding: 30px 20px; background: #fff; color: #555; font-size: 0.9rem; }
 
-/* HEADER / BRAND */
-header{
-  text-align:center;
-  padding:90px 20px 80px;
-  background:linear-gradient(to bottom,#f7f7f7,#fff);
-}
+    /* WhatsApp Button */
+    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 100; }
+    .whatsapp-button:hover { background: #1ebe57; }
 
-header img{
-  width:150px;
-  animation:fade 1.6s ease;
-}
-
-.gold-line{
-  width:120px;
-  height:2px;
-  background:var(--gold);
-  margin:20px auto;
-}
-
-header h1{
-  font-size:clamp(30px,5vw,44px);
-  margin:10px 0;
-}
-
-header p{
-  color:var(--gray);
-  font-size:17px;
-  max-width:760px;
-  margin:10px auto;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin:30px 10px 0;
-  padding:14px 42px;
-  background:var(--black);
-  color:#fff;
-  border-radius:30px;
-  text-decoration:none;
-}
-
-.btn-outline{
-  background:#fff;
-  color:#000;
-  border:1px solid var(--gold);
-}
-
-/* SECTION */
-section{
-  padding:70px 20px;
-  text-align:center;
-}
-
-.services{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:26px;
-  max-width:1000px;
-  margin:auto;
-}
-
-.card{
-  border:1px solid #eee;
-  padding:32px;
-  border-radius:16px;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:#aaa;
-  padding:25px;
-  text-align:center;
-}
-
-/* WHATSAPP */
-.whatsapp-float{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:#25D366;
-  color:#fff;
-  padding:14px 18px;
-  border-radius:30px;
-  text-decoration:none;
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-
-/* ANIMATION */
-@keyframes fade{
-  from{opacity:0;transform:translateY(-12px)}
-  to{opacity:1}
-}
-
-@media(max-width:600px){
-  header img{width:120px}
-}
-</style>
+    @media(max-width:768px){
+      .hero h1 { font-size: 2rem; }
+      .trust li { font-size: 1rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="quote.html">Information</a>
-</nav>
+  <!-- Header -->
+  <header>
+    <img src="update-logo.png" alt="Tao Global Services Logo">
+    <nav>
+      <a href="#services">Services / บริการ</a>
+      <a href="#trust">Why Choose Us / ทำไมต้องเลือกเรา</a>
+      <a href="#contact">Contact / ติดต่อ</a>
+    </nav>
+  </header>
 
-<header>
-  <img src="logo.png" alt="Tao Global Services">
-  <div class="gold-line"></div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your Trusted Sourcing & OEM Partner from Thailand / พาร์ทเนอร์เชื่อถือได้ด้านการสรรหาและ OEM จากประเทศไทย</h1>
+    <p>Connecting global businesses to verified Thai suppliers efficiently, reliably, and with precision. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทยที่ได้รับการตรวจสอบ ด้วยความรวดเร็ว แม่นยำ และเชื่อถือได้</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get a Quote / ขอใบเสนอราคา</button>
+  </section>
 
-  <h1>Driven by clarity. Built on trust.</h1>
-  <p>
-    ขับเคลื่อนธุรกิจด้วยความชัดเจน และตั้งอยู่บนความไว้วางใจ
-  </p>
-
-  <a class="btn" href="services.html">Ours Services</a>
-  <a class="btn btn-outline" href="quote.html">Request Information</a>
-</header>
-
-<section>
-  <h2>Our Core Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>Global Sourcing</h3>
-      <p>
-        Strategic sourcing with verified suppliers  
-        <br>
-        <em>คัดสรรด้วยจังหวะและความเหมาะสม</em>
-      </p>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="service-card">
+      <h3>Product Sourcing / การสรรหาผลิตภัณฑ์</h3>
+      <p>High-quality products from trusted Thai manufacturers / ผลิตภัณฑ์คุณภาพสูงจากผู้ผลิตไทยที่เชื่อถือได้</p>
     </div>
-
-    <div class="card">
-      <h3>Import & Export Coordination</h3>
-      <p>
-        Documentation, compliance, and execution  
-        <br>
-        <em>ถูกต้อง ชัดเจน และราบรื่น</em>
-      </p>
+    <div class="service-card">
+      <h3>OEM & Branding / บริการ OEM & แบรนด์ของคุณ</h3>
+      <p>Custom solutions tailored to your specifications / บริการปรับแต่งและออกแบบตามความต้องการเฉพาะของคุณ</p>
     </div>
-
-    <div class="card">
-      <h3>Trading Intermediary</h3>
-      <p>
-        Trusted cross-border facilitation  
-        <br>
-        <em>ตัวกลางที่ดี นำพาธุรกิจไปข้างหน้า</em>
-      </p>
+    <div class="service-card">
+      <h3>Supplier Verification / ตรวจสอบผู้ผลิต</h3>
+      <p>Reliable, certified, and quality-checked suppliers / ผู้ผลิตที่เชื่อถือได้ มีใบรับรอง และผ่านการตรวจสอบคุณภาพ</p>
     </div>
-  </div>
-</section>
+    <div class="service-card">
+      <h3>Logistics & Shipping / โลจิสติก & การจัดส่ง</h3>
+      <p>Efficient delivery from Thailand to your destination / จัดส่งจากประเทศไทยอย่างรวดเร็วและมีประสิทธิภาพถึงปลายทาง</p>
+    </div>
+  </section>
 
-<footer>
-© 2025 Tao Global Services · Clarity · Timing · Trust
-</footer>
+  <!-- Trust Section -->
+  <section id="trust" class="trust">
+    <h2>Why Choose Us / ทำไมต้องเลือกเรา</h2>
+    <ul>
+      <li>Verified Thai suppliers for peace of mind / ผู้ผลิตไทยที่ผ่านการตรวจสอบเพื่อความมั่นใจ</li>
+      <li>Fast, responsive, and cost-effective solutions / บริการรวดเร็ว ตอบสนองทันที และคุ้มค่า</li>
+      <li>Seamless communication for international clients / การสื่อสารที่ราบรื่นสำหรับลูกค้าทั่วโลก</li>
+      <li>Corporate expertise with a subtle mū approach / ความเชี่ยวชาญแบบมืออาชีพ พร้อมแนวทางมูเล็กน้อย</li>
+    </ul>
+  </section>
 
-<a class="whatsapp-float" href="https://wa.me/66921563555" target="_blank">
-WhatsApp
-</a>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <form action="https://formspree.io/f/mojqeqaz" method="POST">
+      <h2>Contact Us / ติดต่อ</h2>
+      <input type="text" name="name" placeholder="Your Name / ชื่อ" required>
+      <input type="email" name="email" placeholder="Your Email / อีเมล" required>
+      <textarea name="message" rows="5" placeholder="Your Message / ข้อความ" required></textarea>
+      <button type="submit">Send Message / ส่งข้อความ</button>
+    </form>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/66921563555" target="_blank" class="whatsapp-button">💬</a>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Tao Global Services | Bangkok, Thailand
+  </footer>
 
 </body>
 </html>
-
