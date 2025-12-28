@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
-    body { background-color: #fff; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+    body { background-color: #fff; color: #333; line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
 
     a { text-decoration: none; color: inherit; }
 
@@ -19,52 +19,63 @@
 
     /* Hero */
     .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px; 
-      background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
-                  url('hero-bg.jpg') no-repeat center/cover; 
+      background: url('hero-bg.jpg') no-repeat center/cover; 
       position: relative; overflow: hidden;
+      animation: heroZoom 30s infinite alternate ease-in-out;
+    }
+    @keyframes heroZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
     }
     /* Globe/Thailand abstract overlay */
     .hero::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 50%; left: 50%; width: 600px; height: 600px;
+      margin-left: -300px; margin-top: -300px;
       background: url('globe-thailand-abstract.svg') no-repeat center/contain;
       opacity: 0.15;
       pointer-events: none;
+      animation: rotateGlobe 60s linear infinite;
+      transform-origin: center center;
+    }
+    @keyframes rotateGlobe {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; opacity: 0; transform: translateY(20px); transition: all 1s ease; }
     .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.2s; }
     .hero button { background: #007bff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.4s; }
-    .hero button:hover { background: #0056b3; }
+    .hero button:hover { background: #0056b3; transform: scale(1.05); }
 
     /* Services */
     .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 60px 40px; }
-    .service-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; opacity: 0; transform: translateY(20px); }
-    .service-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .service-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.5s; opacity: 0; transform: translateY(20px); }
+    .service-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.15); transform: translateY(-10px) scale(1.03); }
     .service-card h3 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; }
     .service-card p { color: #555; }
 
     /* Trust Section */
-    .trust { padding: 60px 40px; background: #f8f8f8; display: flex; flex-direction: column; align-items: center; text-align: center; opacity: 0; transform: translateY(20px); }
+    .trust { padding: 60px 40px; background: #f8f8f8; display: flex; flex-direction: column; align-items: center; text-align: center; opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
     .trust h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 40px; font-size: 2rem; }
     .trust ul { list-style: none; max-width: 800px; }
     .trust li { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: center; }
     .trust li::before { content: '✔'; color: #ffcc00; margin-right: 10px; font-weight: bold; }
 
     /* Contact Section */
-    .contact { padding: 60px 40px; display: flex; justify-content: center; align-items: center; background: #fff; opacity: 0; transform: translateY(20px); }
+    .contact { padding: 60px 40px; display: flex; justify-content: center; align-items: center; background: #fff; opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
     .contact form { background: #f8f8f8; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 500px; width: 100%; }
     .contact form h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 20px; text-align: center; }
     .contact form input, .contact form textarea { width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
     .contact form button { background: #28a745; color: #fff; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; width: 100%; }
-    .contact form button:hover { background: #1e7e34; }
+    .contact form button:hover { background: #1e7e34; transform: scale(1.02); }
 
     /* Footer */
     footer { text-align: center; padding: 30px 20px; background: #fff; color: #555; font-size: 0.9rem; }
 
     /* WhatsApp Button */
-    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 100; }
-    .whatsapp-button:hover { background: #1ebe57; }
+    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 100; transition: transform 0.3s ease; }
+    .whatsapp-button:hover { background: #1ebe57; transform: scale(1.1); }
 
     @media(max-width:768px){
       .hero h1 { font-size: 2rem; }
