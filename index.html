@@ -4,233 +4,225 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO Meta Tags -->
-  <title>Tao Global Services | Expert Sourcing & OEM from Thailand</title>
-  <meta name="description" content="Connecting global businesses with verified Thai suppliers. Sourcing, OEM branding, and logistics solutions from Thailand. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทย บริการสรรหา OEM และโลจิสติกครบวงจร">
-  <meta name="keywords" content="Thailand sourcing agent, OEM Thailand, Thai suppliers, product sourcing, logistics Thailand, Thai manufacturers, global sourcing">
-  <meta name="author" content="Tao Global Services">
-  <meta name="language" content="EN, TH">
+  <title>Tao Global Services | Thailand Sourcing Agent & OEM Procurement</title>
+  <meta name="description" content="Expert sourcing agent in Bangkok. Connecting global brands with verified Thai manufacturers for OEM, food, cosmetics, and industrial parts.">
+  <meta name="keywords" content="Thailand sourcing agent, OEM Thailand, Thai suppliers, product sourcing Bangkok, Thai manufacturers, global sourcing">
+  
+  <meta name="geo.region" content="TH-10" />
+  <meta name="geo.placename" content="Bangkok" />
+  <meta name="geo.position" content="13.7563;100.5018" />
+  <meta name="ICBM" content="13.7563, 100.5018" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tao Global Services | Expert Sourcing & OEM from Thailand">
-  <meta property="og:description" content="Connecting global businesses with verified Thai suppliers. Sourcing, OEM branding, and logistics solutions. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทย บริการสรรหา OEM และโลจิสติกครบวงจร">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.taoglobalservices.com/">
-  <meta property="og:image" content="https://www.taoglobalservices.com/logo.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tao Global Services | Expert Sourcing & OEM from Thailand">
-  <meta name="twitter:description" content="Connecting global businesses with verified Thai suppliers. Sourcing, OEM branding, and logistics solutions.">
-  <meta name="twitter:image" content="https://www.taoglobalservices.com/logo.png">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tao Global Services",
-    "url": "https://www.taoglobalservices.com/",
-    "logo": "https://www.taoglobalservices.com/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/TaoGlobalServices",
-      "https://www.linkedin.com/company/taoglobalservices",
-      "https://wa.me/66921563555"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+66 921 563 555",
-      "contactType": "customer service",
-      "areaServed": "TH",
-      "availableLanguage": ["English", "Thai"]
-    }],
-    "description": "Tao Global Services connects international businesses with verified Thai suppliers, providing sourcing, OEM branding, and logistics solutions. / Tao Global Services เชื่อมต่อธุรกิจต่างประเทศกับผู้ผลิตไทยที่ผ่านการตรวจสอบ บริการสรรหา OEM และโลจิสติกครบวงจร"
-  }
-  </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
-    body { background-color: #fff; color: #333; line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
-    a { text-decoration: none; color: inherit; }
+    :root {
+      --primary: #FFCC00;
+      --primary-dark: #D4AF37;
+      --secondary: #1a1a1a;
+      --text-main: #333;
+      --text-light: #666;
+      --bg-light: #fdfdfd;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-main); line-height: 1.7; overflow-x: hidden; }
 
     /* Header */
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 10; }
-    header img { width: 160px; }
-    nav a { margin-left: 30px; font-weight: 600; color: #333; }
+    header { 
+      display: flex; justify-content: space-between; align-items: center; 
+      padding: 15px 5%; background: rgba(255,255,255,0.95); 
+      backdrop-filter: blur(10px); position: sticky; top: 0; 
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05); z-index: 1000; 
+    }
+    header img { height: 45px; }
+    nav a { margin-left: 25px; font-weight: 600; font-size: 0.9rem; color: var(--secondary); text-decoration: none; transition: var(--transition); }
+    nav a:hover { color: var(--primary-dark); }
 
     /* Hero */
-    .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px; 
-      background: url('hero-bg.jpg') no-repeat center/cover; 
-      position: relative; overflow: hidden;
-      animation: heroZoom 30s infinite alternate ease-in-out;
+    .hero { 
+      min-height: 85vh; display: flex; flex-direction: column; 
+      justify-content: center; align-items: center; text-align: center; 
+      padding: 0 20px; position: relative; overflow: hidden;
+      background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('hero-bg.jpg') center/cover;
     }
-    @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+    #particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+    .hero-content { z-index: 2; max-width: 900px; }
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 25px; color: var(--secondary); }
+    .hero p { font-size: clamp(1.1rem, 2vw, 1.4rem); margin-bottom: 40px; color: var(--text-light); }
 
-    /* Globe overlay */
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 50%; left: 50%; width: 600px; height: 600px;
-      margin-left: -300px; margin-top: -300px;
-      background: url('globe-thailand-abstract.svg') no-repeat center/contain;
-      opacity: 0.15;
-      pointer-events: none;
-      animation: rotateGlobe 60s linear infinite;
-      transform-origin: center center;
+    /* Buttons */
+    .cta-btn { 
+      background: var(--primary); color: #000; padding: 18px 45px; border: none; 
+      border-radius: 50px; font-weight: 700; cursor: pointer; 
+      box-shadow: 0 10px 20px rgba(255,204,0,0.3); transition: var(--transition); text-decoration: none; display: inline-block;
     }
-    @keyframes rotateGlobe { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .cta-btn:hover { transform: translateY(-3px); background: var(--primary-dark); }
 
-    /* Particle canvas */
-    #particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    /* Generic Section */
+    section { padding: 100px 5%; }
+    .section-title { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 50px; }
 
-    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; opacity: 0; transform: translateY(20px); transition: all 1s ease; z-index: 1; position: relative;}
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.2s; z-index: 1; position: relative;}
-    .hero button { background: #FFCC00; color: #333; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.4s; z-index: 1; position: relative;}
-    .hero button:hover { background: #D4AF37; transform: scale(1.05); }
+    /* About Grid */
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .about-img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px var(--primary); }
 
-    /* Services */
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 60px 40px; }
-    .service-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.5s; opacity: 0; transform: translateY(20px); }
-    .service-card:hover { box-shadow: 0 8px 25px rgba(212,175,55,0.15); transform: translateY(-10px) scale(1.03); }
-    .service-card h3 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; }
-    .service-card p { color: #555; }
+    /* Industries Grid */
+    .ind-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+    .ind-card { background: white; padding: 35px; border-radius: 15px; border-bottom: 4px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 
-    /* Trust Section */
-    .trust { padding: 60px 40px; background: #f8f8f8; display: flex; flex-direction: column; align-items: center; text-align: center; opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-    .trust h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 40px; font-size: 2rem; }
-    .trust ul { list-style: none; max-width: 800px; }
-    .trust li { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: center; }
-    .trust li::before { content: '✔'; color: #FFCC00; margin-right: 10px; font-weight: bold; }
+    /* How it Works */
+    .step-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1200px; margin: 0 auto; }
+    .step { flex: 1; min-width: 250px; text-align: center; }
+    .step-num { width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: bold; }
 
-    /* Contact Section */
-    .contact { padding: 60px 40px; display: flex; justify-content: center; align-items: center; background: #fff; opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-    .contact form { background: #f8f8f8; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 500px; width: 100%; }
-    .contact form h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 20px; text-align: center; }
-    .contact form input, .contact form textarea { width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
-    .contact form button { background: #28a745; color: #fff; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; width: 100%; }
-    .contact form button:hover { background: #1e7e34; transform: scale(1.02); }
+    /* Contact Form */
+    .contact-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 10px; font-family: inherit; }
+    .submit-btn { background: var(--secondary); color: #fff; width: 100%; padding: 18px; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
 
-    /* Footer */
-    footer { text-align: center; padding: 30px 20px; background: #fff; color: #555; font-size: 0.9rem; }
-
-    /* WhatsApp Button */
-    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background: #25D366; box-shadow: 0 4px 10px rgba(212,175,55,0.3); cursor: pointer; z-index: 100; transition: transform 0.3s ease; }
-    .whatsapp-button:hover { transform: scale(1.1); }
-    .whatsapp-button img { width: 32px; height: 32px; }
-
-    @media(max-width:768px){
-      .hero h1 { font-size: 2rem; }
-      .trust li { font-size: 1rem; }
-    }
+    /* WhatsApp */
+    .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    
+    @media (max-width: 768px) { .about-grid, .contact-container { grid-template-columns: 1fr; } nav { display: none; } }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <img src="logo.png" alt="Tao Global Services Logo">
+    <img src="logo.png" alt="Tao Global Services">
     <nav>
-      <a href="#services">Services / บริการ</a>
-      <a href="#trust">Why Choose Us / ทำไมต้องเลือกเรา</a>
-      <a href="#contact">Contact / ติดต่อ</a>
+      <a href="#about">About</a>
+      <a href="#industries">Industries</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <canvas id="particles"></canvas>
-    <h1>Your Trusted Sourcing & OEM Partner from Thailand / พาร์ทเนอร์เชื่อถือได้ด้านการสรรหาและ OEM จากประเทศไทย</h1>
-    <p>Connecting global businesses to verified Thai suppliers efficiently, reliably, and with precision. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทยที่ได้รับการตรวจสอบ ด้วยความรวดเร็ว แม่นยำ และเชื่อถือได้</p>
-    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get a Quote / ขอใบเสนอราคา</button>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="service-card">
-      <h3>Product Sourcing / การสรรหาผลิตภัณฑ์</h3>
-      <p>High-quality products from trusted Thai manufacturers / ผลิตภัณฑ์คุณภาพสูงจากผู้ผลิตไทยที่เชื่อถือได้</p>
-    </div>
-    <div class="service-card">
-      <h3>OEM & Branding / บริการ OEM & แบรนด์ของคุณ</h3>
-      <p>Custom solutions tailored to your specifications / บริการปรับแต่งและออกแบบตามความต้องการเฉพาะของคุณ</p>
-    </div>
-    <div class="service-card">
-      <h3>Supplier Verification / ตรวจสอบผู้ผลิต</h3>
-      <p>Reliable, certified, and quality-checked suppliers / ผู้ผลิตที่เชื่อถือได้ มีใบรับรอง และผ่านการตรวจสอบคุณภาพ</p>
-    </div>
-    <div class="service-card">
-      <h3>Logistics & Shipping / โลจิสติก & การจัดส่ง</h3>
-      <p>Efficient delivery from Thailand to your destination / จัดส่งจากประเทศไทยอย่างรวดเร็วและมีประสิทธิภาพถึงปลายทาง</p>
+    <div class="hero-content">
+      <h1>Your Premier Gateway to <span style="color:var(--primary-dark)">Thai Manufacturing</span></h1>
+      <p>Seamless Sourcing, Verified Suppliers, and Expert OEM Branding. Your trusted partner on the ground in Bangkok.</p>
+      <a href="#contact" class="cta-btn">Start Your Sourcing Inquiry</a>
     </div>
   </section>
 
-  <!-- Trust Section -->
-  <section id="trust" class="trust">
-    <h2>Why Choose Us / ทำไมต้องเลือกเรา</h2>
-    <ul>
-      <li>Verified Thai suppliers for peace of mind / ผู้ผลิตไทยที่ผ่านการตรวจสอบเพื่อความมั่นใจ</li>
-      <li>Fast, responsive, and cost-effective solutions / บริการรวดเร็ว ตอบสนองทันที และคุ้มค่า</li>
-      <li>Seamless communication for international clients / การสื่อสารที่ราบรื่นสำหรับลูกค้าทั่วโลก</li>
-      <li>Corporate expertise with proven reliability / ความเชี่ยวชาญแบบมืออาชีพ พร้อมความน่าเชื่อถือสูง</li>
-    </ul>
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <h2 class="section-title" style="text-align: left;">Bridging the Gap Between <span style="color:var(--primary-dark)">Global Brands</span> and Thai Excellence</h2>
+        <p>Tao Global Services is a Bangkok-based agency dedicated to secure procurement. We eliminate the risks of language barriers, quality inconsistencies, and logistical delays.</p>
+        <br>
+        <p>Our mission is simple: To provide 100% transparency. You get direct-to-factory pricing while we handle the boots-on-the-ground work.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?q=80&w=800" class="about-img" alt="Professional Sourcing Agency Thailand">
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <form action="https://formspree.io/f/mojqeqaz" method="POST">
-      <h2>Contact Us / ติดต่อ</h2>
-      <input type="text" name="name" placeholder="Your Name / ชื่อ" required>
-      <input type="email" name="email" placeholder="Your Email / อีเมล" required>
-      <textarea name="message" rows="5" placeholder="Your Message / ข้อความ" required></textarea>
-      <button type="submit">Send Message / ส่งข้อความ</button>
-    </form>
+  <section id="industries" style="background: #f9f9f9;">
+    <h2 class="section-title">Core Sourcing Sectors</h2>
+    <div class="ind-grid">
+      <div class="ind-card">
+        <h4>Food & Agriculture</h4>
+        <p>Rice, dried fruits, and healthy snacks with international certifications.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Wellness & Beauty</h4>
+        <p>Premium Thai herb cosmetics, spa products, and OEM skincare solutions.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Eco-Friendly Goods</h4>
+        <p>Biodegradable packaging and sustainable lifestyle products from Thai producers.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Industrial Parts</h4>
+        <p>Rubber components, plastic injection molding, and automotive spare parts.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/66921563555" target="_blank" class="whatsapp-button">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <section id="how-it-works">
+    <h2 class="section-title">The Tao Global Process</h2>
+    
+    <div class="step-container">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Discovery</h4>
+        <p>We analyze your product requirements and find the best factory matches.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Vetting</h4>
+        <p>On-site audits to verify factory legitimacy and production capacity.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Quality QC</h4>
+        <p>Physical inspections during and after production to ensure standards.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Logistics</h4>
+        <p>Seamless export handling from Thailand to your destination port.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Tao Global Services | Bangkok, Thailand
+  <section id="contact" style="background: var(--secondary); color: #fff;">
+    <div class="contact-container" style="color: #333;">
+      <div>
+        <h2 style="margin-bottom: 20px;">Get a Free Quote</h2>
+        <p>Our sourcing experts respond within 24 hours. Let's discuss your project requirements.</p>
+        <div style="margin-top: 40px;">
+          <p><strong>Email:</strong> info@taoglobalservices.com</p>
+          <p><strong>WhatsApp:</strong> +66 92 156 3555</p>
+        </div>
+      </div>
+      <form action="https://formspree.io/f/mojqeqaz" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Tell us what you are looking for..." required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer style="padding: 40px 5%; background: #000; color: #666; font-size: 0.8rem; text-align: center;">
+    <p>Tao Global Services | Bangkok, Thailand. Specialists in Thai Product Sourcing, Factory Audits, and OEM Management.</p>
+    <p>&copy; 2025 All Rights Reserved.</p>
   </footer>
 
-  <!-- Scroll & Particles JS -->
-  <script>
-    const animateOnScroll = () => {
-      const elements = document.querySelectorAll('.hero h1, .hero p, .hero button, .service-card, .trust, .contact');
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 100){
-          el.style.opacity = 1;
-          el.style.transform = 'translateY(0)';
-        }
-      });
-    };
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateOnScroll);
+  <a href="https://wa.me/66921563555" class="whatsapp" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30">
+  </a>
 
+  <script>
     // Particle Animation
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
-    let particlesArray;
-    const resizeCanvas = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor(x, y, size, speedX, speedY) { this.x = x; this.y = y; this.size = size; this.speedX = speedX; this.speedY = speedY; }
-      update() { this.x += this.speedX; this.y += this.speedY; if(this.x>canvas.width) this.x=0; if(this.x<0) this.x=canvas.width; if(this.y>canvas.height) this.y=0; if(this.y<0) this.y=canvas.height; }
-      draw() { ctx.fillStyle = 'rgba(255,204,0,0.3)'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2); ctx.fill(); }
+    let particles = [];
+    function init() {
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      particles = [];
+      for(let i=0; i<40; i++) {
+        particles.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2+1, dx: (Math.random()-0.5)*0.5, dy: (Math.random()-0.5)*0.5 });
+      }
     }
-
-    function initParticles() { particlesArray = []; for(let i=0;i<50;i++){ let size=Math.random()*3+1; let x=Math.random()*canvas.width; let y=Math.random()*canvas.height; let speedX=(Math.random()-0.5)/2; let speedY=(Math.random()-0.5)/2; particlesArray.push(new Particle(x,y,size,speedX,speedY)); } }
-    function animateParticles() { ctx.clearRect(0,0,canvas.width,canvas.height); particlesArray.forEach(p=>{ p.update(); p.draw(); }); requestAnimationFrame(animateParticles); }
-    initParticles(); animateParticles();
+    function draw() {
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(212, 175, 55, 0.2)';
+      particles.forEach(p => {
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
+        p.x += p.dx; p.y += p.dy;
+        if(p.x<0 || p.x>canvas.width) p.dx*=-1; if(p.y<0 || p.y>canvas.height) p.dy*=-1;
+      });
+      requestAnimationFrame(draw);
+    }
+    window.addEventListener('resize', init);
+    init(); draw();
   </script>
-
 </body>
 </html>
