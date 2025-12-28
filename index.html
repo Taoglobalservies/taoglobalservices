@@ -3,13 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
   <title>Tao Global Services | Expert Sourcing & OEM from Thailand</title>
-  <meta name="description" content="Tao Global Services connects international businesses with verified Thai suppliers, providing sourcing, OEM branding, and logistics solutions. / Tao Global Services เชื่อมต่อธุรกิจต่างประเทศกับผู้ผลิตไทยที่ผ่านการตรวจสอบ บริการสรรหา OEM และโลจิสติกครบวงจร">
+  <meta name="description" content="Connecting global businesses with verified Thai suppliers. Sourcing, OEM branding, and logistics solutions from Thailand. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทย บริการสรรหา OEM และโลจิสติกครบวงจร">
+  <meta name="keywords" content="Thailand sourcing agent, OEM Thailand, Thai suppliers, product sourcing, logistics Thailand, Thai manufacturers, global sourcing">
+  <meta name="author" content="Tao Global Services">
+  <meta name="language" content="EN, TH">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tao Global Services | Expert Sourcing & OEM from Thailand">
+  <meta property="og:description" content="Connecting global businesses with verified Thai suppliers. Sourcing, OEM branding, and logistics solutions. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทย บริการสรรหา OEM และโลจิสติกครบวงจร">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.taoglobalservices.com/">
+  <meta property="og:image" content="https://www.taoglobalservices.com/logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tao Global Services | Expert Sourcing & OEM from Thailand">
+  <meta name="twitter:description" content="Connecting global businesses with verified Thai suppliers. Sourcing, OEM branding, and logistics solutions.">
+  <meta name="twitter:image" content="https://www.taoglobalservices.com/logo.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tao Global Services",
+    "url": "https://www.taoglobalservices.com/",
+    "logo": "https://www.taoglobalservices.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/TaoGlobalServices",
+      "https://www.linkedin.com/company/taoglobalservices",
+      "https://wa.me/66921563555"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+66 921 563 555",
+      "contactType": "customer service",
+      "areaServed": "TH",
+      "availableLanguage": ["English", "Thai"]
+    }],
+    "description": "Tao Global Services connects international businesses with verified Thai suppliers, providing sourcing, OEM branding, and logistics solutions. / Tao Global Services เชื่อมต่อธุรกิจต่างประเทศกับผู้ผลิตไทยที่ผ่านการตรวจสอบ บริการสรรหา OEM และโลจิสติกครบวงจร"
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
     body { background-color: #fff; color: #333; line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
-
     a { text-decoration: none; color: inherit; }
 
     /* Header */
@@ -25,7 +68,7 @@
     }
     @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
 
-    /* Globe/Thailand abstract overlay */
+    /* Globe overlay */
     .hero::after {
       content: "";
       position: absolute;
@@ -155,7 +198,7 @@
     &copy; 2025 Tao Global Services | Bangkok, Thailand
   </footer>
 
-  <!-- Scroll Animation JS -->
+  <!-- Scroll & Particles JS -->
   <script>
     const animateOnScroll = () => {
       const elements = document.querySelectorAll('.hero h1, .hero p, .hero button, .service-card, .trust, .contact');
