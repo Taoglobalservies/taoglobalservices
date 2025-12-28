@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
-    body { background-color: #fff; color: #333; line-height: 1.6; }
+    body { background-color: #fff; color: #333; line-height: 1.6; scroll-behavior: smooth; }
 
     a { text-decoration: none; color: inherit; }
 
@@ -18,28 +18,41 @@
     nav a { margin-left: 30px; font-weight: 600; color: #333; }
 
     /* Hero */
-    .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('hero-bg.jpg') no-repeat center/cover; }
-    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; }
-    .hero button { background: #007bff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+    .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px; 
+      background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                  url('hero-bg.jpg') no-repeat center/cover; 
+      position: relative; overflow: hidden;
+    }
+    /* Globe/Thailand abstract overlay */
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('globe-thailand-abstract.svg') no-repeat center/contain;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; opacity: 0; transform: translateY(20px); transition: all 1s ease; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.2s; }
+    .hero button { background: #007bff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.4s; }
     .hero button:hover { background: #0056b3; }
 
     /* Services */
     .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 60px 40px; }
-    .service-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .service-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; opacity: 0; transform: translateY(20px); }
     .service-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
     .service-card h3 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; }
     .service-card p { color: #555; }
 
     /* Trust Section */
-    .trust { padding: 60px 40px; background: #f8f8f8; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .trust { padding: 60px 40px; background: #f8f8f8; display: flex; flex-direction: column; align-items: center; text-align: center; opacity: 0; transform: translateY(20px); }
     .trust h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 40px; font-size: 2rem; }
     .trust ul { list-style: none; max-width: 800px; }
     .trust li { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: center; }
     .trust li::before { content: '✔'; color: #ffcc00; margin-right: 10px; font-weight: bold; }
 
     /* Contact Section */
-    .contact { padding: 60px 40px; display: flex; justify-content: center; align-items: center; background: #fff; }
+    .contact { padding: 60px 40px; display: flex; justify-content: center; align-items: center; background: #fff; opacity: 0; transform: translateY(20px); }
     .contact form { background: #f8f8f8; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 500px; width: 100%; }
     .contact form h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 20px; text-align: center; }
     .contact form input, .contact form textarea { width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
@@ -63,7 +76,7 @@
 
   <!-- Header -->
   <header>
-    <img src="update-logo.png" alt="Tao Global Services Logo">
+    <img src="logo.png" alt="Tao Global Services Logo">
     <nav>
       <a href="#services">Services / บริการ</a>
       <a href="#trust">Why Choose Us / ทำไมต้องเลือกเรา</a>
@@ -127,6 +140,22 @@
   <footer>
     &copy; 2025 Tao Global Services | Bangkok, Thailand
   </footer>
+
+  <!-- Scroll Animation JS -->
+  <script>
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.hero h1, .hero p, .hero button, .service-card, .trust, .contact');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
 
 </body>
 </html>
