@@ -23,10 +23,8 @@
       position: relative; overflow: hidden;
       animation: heroZoom 30s infinite alternate ease-in-out;
     }
-    @keyframes heroZoom {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.05); }
-    }
+    @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+
     /* Globe/Thailand abstract overlay */
     .hero::after {
       content: "";
@@ -39,13 +37,14 @@
       animation: rotateGlobe 60s linear infinite;
       transform-origin: center center;
     }
-    @keyframes rotateGlobe {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; opacity: 0; transform: translateY(20px); transition: all 1s ease; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.2s; }
-    .hero button { background: #007bff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.4s; }
+    @keyframes rotateGlobe { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* Particle canvas */
+    #particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: #222; opacity: 0; transform: translateY(20px); transition: all 1s ease; z-index: 1; position: relative;}
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #555; max-width: 700px; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.2s; z-index: 1; position: relative;}
+    .hero button { background: #007bff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 1s ease 0.4s; z-index: 1; position: relative;}
     .hero button:hover { background: #0056b3; transform: scale(1.05); }
 
     /* Services */
@@ -74,8 +73,9 @@
     footer { text-align: center; padding: 30px 20px; background: #fff; color: #555; font-size: 0.9rem; }
 
     /* WhatsApp Button */
-    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 100; transition: transform 0.3s ease; }
-    .whatsapp-button:hover { background: #1ebe57; transform: scale(1.1); }
+    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background: #25D366; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 100; transition: transform 0.3s ease; }
+    .whatsapp-button:hover { transform: scale(1.1); }
+    .whatsapp-button img { width: 32px; height: 32px; }
 
     @media(max-width:768px){
       .hero h1 { font-size: 2rem; }
@@ -97,6 +97,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <canvas id="particles"></canvas>
     <h1>Your Trusted Sourcing & OEM Partner from Thailand / พาร์ทเนอร์เชื่อถือได้ด้านการสรรหาและ OEM จากประเทศไทย</h1>
     <p>Connecting global businesses to verified Thai suppliers efficiently, reliably, and with precision. / เชื่อมต่อธุรกิจทั่วโลกกับผู้ผลิตไทยที่ได้รับการตรวจสอบ ด้วยความรวดเร็ว แม่นยำ และเชื่อถือได้</p>
     <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get a Quote / ขอใบเสนอราคา</button>
@@ -145,7 +146,9 @@
   </section>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/66921563555" target="_blank" class="whatsapp-button">💬</a>
+  <a href="https://wa.me/66921563555" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
 
   <!-- Footer -->
   <footer>
@@ -166,6 +169,24 @@
     };
     window.addEventListener('scroll', animateOnScroll);
     window.addEventListener('load', animateOnScroll);
+
+    // Particle Animation
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particlesArray;
+    const resizeCanvas = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor(x, y, size, speedX, speedY) { this.x = x; this.y = y; this.size = size; this.speedX = speedX; this.speedY = speedY; }
+      update() { this.x += this.speedX; this.y += this.speedY; if(this.x>canvas.width) this.x=0; if(this.x<0) this.x=canvas.width; if(this.y>canvas.height) this.y=0; if(this.y<0) this.y=canvas.height; }
+      draw() { ctx.fillStyle = 'rgba(255,204,0,0.3)'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2); ctx.fill(); }
+    }
+
+    function initParticles() { particlesArray = []; for(let i=0;i<50;i++){ let size=Math.random()*3+1; let x=Math.random()*canvas.width; let y=Math.random()*canvas.height; let speedX=(Math.random()-0.5)/2; let speedY=(Math.random()-0.5)/2; particlesArray.push(new Particle(x,y,size,speedX,speedY)); } }
+    function animateParticles() { ctx.clearRect(0,0,canvas.width,canvas.height); particlesArray.forEach(p=>{ p.update(); p.draw(); }); requestAnimationFrame(animateParticles); }
+    initParticles(); animateParticles();
   </script>
 
 </body>
